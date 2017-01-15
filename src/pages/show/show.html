@@ -13,7 +13,7 @@
   		</ion-card-header>
   		<ion-card-content>
   			{{ workouts?.enrolled[0].pivot.workout_id }}
-        <ion-item (click)="goTo('detalles')">
+        <ion-item (click)="goTo(workouts?.enrolled[0].pivot.workout_id)">
           <button ion-button block>Detalles</button>
         </ion-item>
   		</ion-card-content>
@@ -25,7 +25,7 @@
   		</ion-card-header>
   		<ion-card-content>
   			{{ workouts?.enrolled[1].pivot.workout_id }}
-        <ion-item (click)="goTo('detalles')">
+        <ion-item (click)="goTo(workouts?.enrolled[1].pivot.workout_id)">
           <button ion-button block>Detalles</button>
         </ion-item>
   		</ion-card-content>

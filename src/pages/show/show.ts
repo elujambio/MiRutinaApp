@@ -47,8 +47,8 @@ public created: any;
   }
 }
 
-goTo(page){
-if (page === 'detalles') this.navCtrl.push(WorkoutdetailsPage, { user: this.user });
+goTo(exid){
+this.navCtrl.push(WorkoutdetailsPage, { exerciseId: exid });
 }
 
   ngOnInit() {
