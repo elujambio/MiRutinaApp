@@ -21,7 +21,7 @@
     </ion-card-header>
     <ion-card-content>
       {{ lesson.description }}
-      <ion-item (click)="goTo()">
+      <ion-item (click)="goTo(lesson.id, lesson.gym_id, lesson.teacher_id)">
         <button ion-button block>Detalles</button>
       </ion-item>
     </ion-card-content>
