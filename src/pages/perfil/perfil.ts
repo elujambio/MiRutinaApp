@@ -15,6 +15,7 @@ import { NavController, NavParams } from 'ionic-angular';
 export class PerfilPage {
 	public user: any;
 	public gyms: any;
+	public gymid: any;
 
 	constructor(public navCtrl: NavController, public navParams: NavParams, public apiCtrl: Api) {
 		this.apiCtrl.get('http://gymapp-nuva.herokuapp.com/api/user')
@@ -27,13 +28,11 @@ export class PerfilPage {
 	ionViewDidLoad() {
 
 		this.user = this.navParams.get('user');
-
-		if (this.user) { // all is well
-			this.apiCtrl.get('http://gymapp-nuva.herokuapp.com/api/gym')
-				.then(data => {
-					this.gyms = data;
-				});
-		}
+		this.gymid = this.navParams.get('gymId');
+		this.apiCtrl.get('http://gymapp-nuva.herokuapp.com/api/gym/'+this.gymid)
+			.then(data => {
+				this.gyms = data;
+			});
 
 		// something is fishy
 

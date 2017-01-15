@@ -1,11 +1,11 @@
 <div class="dashboard">
   <div class="slider">
-    
+
   	<!-- <h1>{{ user?.name }} ({{ user?.role.title }})</h1> -->
   </div>
 
   <div class="dashboard__menu">
-    
+
     <div class="dashboard__menu__column">
       <div class="dashboard__menu__item" *ngIf="user?.role.id === 1 || user?.role.id === 6" (click)="goTo('clases')">
           <h3>Clases</h3>
@@ -21,7 +21,7 @@
           <img src="images/aparatos.svg" alt="">
       </div>
 
-      <div class="dashboard__menu__item" *ngIf="user?.role.id === 1 || user?.role.id === 6" (click)="goTo('perfil')">
+      <div class="dashboard__menu__item" *ngIf="user?.role.id === 1 || user?.role.id === 6" (click)="open(user?.gym_id)">
           <h3>Mi Perfil</h3>
       </div>
 
