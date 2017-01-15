@@ -21,18 +21,21 @@ export class WorkoutdetailsPage {
 public workouts: any;
 public id_workout: any;
 public exercises: any;
+public exerciseid: any;
 
   @ViewChild(TimerComponent) timer: TimerComponent;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public apiCtrl: Api) {
-  this.apiCtrl.get('http://gymapp-nuva.herokuapp.com/api/workout/2')
-    .then(data => {
-      this.exercises = data;
-    });
+
   }
 
   ionViewDidLoad() {
     //console.log('ionViewDidLoad WorkoutdetailsPage');
+		this.exerciseid = this.navParams.get('exerciseId');
+		this.apiCtrl.get('http://gymapp-nuva.herokuapp.com/api/workout/'+this.exerciseid)
+	    .then(data => {
+	      this.exercises = data;
+	    });
 
   }
 
