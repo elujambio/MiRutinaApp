@@ -28,10 +28,35 @@ ion-menu {
 .side-menu {
 	z-index:  100; 
 	background:  #ffffff; 
-	height:  48px; 
-	width:  48px; 
+	height:  100%; 
+	width:  calc(100% - 144px); 
 
 }
+.menu--toggle {
+	display:  flex; 
+	flex-direction:  column; 
+	align-items:  center; 
+	justify-content:  center; 
+	height:  18px; 
+	width:  48px; 
+	position:  absolute; 
+	top:  36px; 
+	left:  18px; 
+	z-index:  1000; 
+	
+	transform:  skewX(-15deg);
+
+	div {
+		height:  2px; 
+		width:  48px;
+		background:  #ffffff; 
+		position:  absolute;
+	}
+}
+.menu--toggle .line-1 { top: 0px; left:  0px; }
+.menu--toggle .line-2 { top: 8px; left:  0px; }
+.menu--toggle .line-3 { top: 16px; left:  0px; }
+
 // Colors
 
 $orange: #FF6236;
