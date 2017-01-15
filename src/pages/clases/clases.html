@@ -15,4 +15,13 @@
 
 <ion-content padding>
 
+  <ion-card *ngFor="let lesson of lessons">
+    <ion-card-header>
+      {{ lesson.name }}
+    </ion-card-header>
+    <ion-card-content>
+      {{ lesson.description }}
+    </ion-card-content>
+  </ion-card>
+
 </ion-content>
