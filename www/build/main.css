@@ -22266,8 +22266,53 @@ ion-menu {
 .side-menu {
   z-index: 100;
   background: #ffffff;
-  height: 48px;
+  height: 100%;
+  width: calc(100% - 144px);
+}
+
+.menu--toggle {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 18px;
   width: 48px;
+  position: absolute;
+  top: 36px;
+  left: 18px;
+  z-index: 1000;
+  -webkit-transform: skewX(-15deg);
+  transform: skewX(-15deg);
+}
+
+.menu--toggle div {
+  height: 2px;
+  width: 48px;
+  background: #ffffff;
+  position: absolute;
+}
+
+.menu--toggle .line-1 {
+  top: 0px;
+  left: 0px;
+}
+
+.menu--toggle .line-2 {
+  top: 8px;
+  left: 0px;
+}
+
+.menu--toggle .line-3 {
+  top: 16px;
+  left: 0px;
 }
 
 @font-face {
