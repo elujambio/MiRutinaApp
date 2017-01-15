@@ -37,8 +37,8 @@ public lessons: any;
 
   }
 
-  goTo(){
-  this.navCtrl.push(LessonsdetailsPage, { user: this.user });
+  goTo(id, gid, tid){
+  this.navCtrl.push(LessonsdetailsPage, { idLesson: id , gymId: gid, teacherId: tid});
   }
 
 }
