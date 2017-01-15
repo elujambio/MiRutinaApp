@@ -1,0 +1,24 @@
+<ion-header>
+	<ion-toolbar color="primary">
+		<ion-navbar>
+			<ion-title>Gimnasios</ion-title>
+			<ion-buttons end>
+				<button ion-button icon-only (click)="addGym()"><ion-icon name="add-circle"></ion-icon></button>
+			</ion-buttons>
+		</ion-navbar>
+	</ion-toolbar>
+	
+</ion-header>
+
+
+<ion-content padding>
+
+	<ion-card *ngFor="let gym of gyms">
+		<ion-card-header>
+			{{ gym.name }}
+		</ion-card-header>
+		<ion-card-content>
+			{{ gym.address }}
+		</ion-card-content>
+	</ion-card>
+</ion-content>

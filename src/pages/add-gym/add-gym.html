@@ -1,0 +1,49 @@
+<ion-header>
+	<ion-toolbar color="primary">
+		<ion-navbar>
+			<ion-title>Agregar Gimansio</ion-title>
+		</ion-navbar>
+	</ion-toolbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-list>
+ 
+		<ion-item>
+			<ion-label floating>Nombre</ion-label>
+			<ion-input type="text" [(ngModel)]="name"></ion-input>
+		</ion-item>
+
+		<ion-item>
+			<ion-label floating>Direccion</ion-label>
+			<ion-input type="text" [(ngModel)]="address"></ion-input>
+		</ion-item>
+
+		<ion-item>
+			<ion-label floating>Abre</ion-label>
+			<ion-input type="text" [(ngModel)]="opens"></ion-input>
+		</ion-item>
+
+		<ion-item>
+			<ion-label floating>Cierra</ion-label>
+			<ion-input type="text" [(ngModel)]="closes"></ion-input>
+		</ion-item>
+
+		<ion-item>
+			<ion-label floating>Latitud</ion-label>
+			<ion-input type="text" [(ngModel)]="lat"></ion-input>
+    	</ion-item>
+
+    	<ion-item>
+			<ion-label floating>Longitud</ion-label>
+			<ion-input type="text" [(ngModel)]="lng"></ion-input>
+    	</ion-item>
+ 
+    </ion-list>
+	 
+    <button full ion-button color="primary" (click)="createGym()">Save</button> 
+
+</ion-content>

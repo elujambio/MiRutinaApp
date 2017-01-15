@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Mi Rutina</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+<a *ngIf="!workouts?.created"> </a>
+  <ion-card>
+  		<ion-card-header>
+  			{{ workouts?.enrolled[0].name }}
+  		</ion-card-header>
+  		<ion-card-content>
+  			{{ workouts?.enrolled[0].pivot.workout_id }}
+        <ion-item (click)="goTo('detalles')">
+          <button ion-button block>Detalles</button>
+        </ion-item>
+  		</ion-card-content>
+  	</ion-card>
+
+    <ion-card>
+  		<ion-card-header>
+  			{{ workouts?.enrolled[1].name }}
+  		</ion-card-header>
+  		<ion-card-content>
+  			{{ workouts?.enrolled[1].pivot.workout_id }}
+        <ion-item (click)="goTo('detalles')">
+          <button ion-button block>Detalles</button>
+        </ion-item>
+  		</ion-card-content>
+  	</ion-card>
+
+  <timer #timer [timeInSeconds]="60"></timer>
+</ion-content>

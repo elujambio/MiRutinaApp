@@ -1,0 +1,25 @@
+<ion-header>
+	<ion-toolbar color="primary">
+		<ion-navbar>
+			<ion-title>Perfil</ion-title>
+			<ion-buttons end>
+				<button ion-button icon-only (click)="addGym()"><ion-icon name="add-circle"></ion-icon></button>
+			</ion-buttons>
+		</ion-navbar>
+	</ion-toolbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<h1>{{ user?.name }} </h1>
+<h1> Member since: ({{ user?.role.created_at}})</h1>
+
+<ion-card >
+	<ion-card-header>
+	Peso
+	</ion-card-header>
+	<ion-card-content>
+	70 kg
+	</ion-card-content>
+</ion-card>

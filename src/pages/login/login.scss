@@ -1,0 +1,51 @@
+page-login {
+
+	.log-in {
+		background-image:  url(../images/log-in-bg.jpg);
+		background-size:  cover; 
+		background-position:  center center; 
+
+		width:  100%; 
+		height:  100%; 
+
+		padding:  24px; 
+		box-sizing:  border-box;
+		display:  flex; 
+		flex-direction:  column; 
+		align-items:  flex-start; 
+		justify-content: flex-end;
+	}
+	ion-label {
+		font-weight: bold;
+		font-style: italic;
+		font-size:  18px; 
+		text-transform:  uppercase;
+	}
+	
+	ion-input, input {
+		color:  #ffffff;
+		font-weight:  bold; 
+		font-style:  italic; 
+		font-size:  18px;	
+	}
+	.input-container {
+		background:  none;
+		margin-bottom:  12px; 
+		padding-left:  0;
+	}
+	button {
+		margin-top:  18px;
+		text-align:  left;
+		border-radius:  5px; 
+		transform:  skewX(-9deg);
+		background:  $orange-gradient; 
+		padding:  18px; 
+		margin-bottom:  18px;
+		font-size:  18px;
+		color:  #ffffff;	
+		text-transform:  uppercase; 
+		font-weight:  bold;	
+	}
+
+}
+

@@ -1,0 +1,14 @@
+<ion-menu type="overlay" [content]="mycontent" class="side-menu">
+  <ion-content>
+    <ion-list>
+		<button ion-button menuToggle>Toggle Menu</button>
+		<div class="menu--toggle">
+			
+		</div>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+
+<ion-nav  #mycontent [root]="rootPage">
+</ion-nav>

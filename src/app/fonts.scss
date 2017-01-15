@@ -1,0 +1,38 @@
+@font-face {
+	font-family: 'TeXGyreHeros';
+	src: url('/fonts/TeXGyreHeros-Regular.eot');
+	src: url('/fonts/TeXGyreHeros-Regular.eot?#iefix') format('embedded-opentype'),
+		url('/fonts/TeXGyreHeros-Regular.woff') format('woff'),
+		url('/fonts/TeXGyreHeros-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'TeXGyreHeros';
+	src: url('/fonts/TeXGyreHeros-Bold.eot');
+	src: url('/fonts/TeXGyreHeros-Bold.eot?#iefix') format('embedded-opentype'),
+		url('/fonts/TeXGyreHeros-Bold.woff') format('woff'),
+		url('/fonts/TeXGyreHeros-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'TeXGyreHeros';
+	src: url('/fonts/TeXGyreHeros-BoldItalic.eot');
+	src: url('/fonts/TeXGyreHeros-BoldItalic.eot?#iefix') format('embedded-opentype'),
+		url('/fonts/TeXGyreHeros-BoldItalic.woff') format('woff'),
+		url('/fonts/TeXGyreHeros-BoldItalic.ttf') format('truetype');
+	font-weight: bold;
+	font-style: italic;
+}
+@font-face {
+	font-family: 'Monaco';
+	src: url('/fonts/Monaco.eot');
+	src: url('/fonts/Monaco.eot?#iefix') format('embedded-opentype'),
+		url('/fonts/Monaco.woff') format('woff'),
+		url('/fonts/Monaco.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
