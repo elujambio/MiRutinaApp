@@ -3,6 +3,8 @@ import { NavController, NavParams } from 'ionic-angular';
 /* import providers */
 	import { Api } from '../../providers/api';
 
+  import { LessonsdetailsPage } from '../lessonsdetails/lessonsdetails';
+
 
 /*
   Generated class for the Clases page.
@@ -33,6 +35,10 @@ public lessons: any;
   }
 
 
+  }
+
+  goTo(){
+  this.navCtrl.push(LessonsdetailsPage, { user: this.user });
   }
 
 }
