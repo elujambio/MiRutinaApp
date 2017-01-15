@@ -22,6 +22,7 @@ import { MyApp } from './app.component';
 import { AparatosPage } from '../pages/aparatos/aparatos';
 import { LogoutPage } from '../pages/logout/logout';
 import { WorkoutdetailsPage } from '../pages/workoutdetails/workoutdetails';
+import { LessonsdetailsPage } from '../pages/lessonsdetails/lessonsdetails';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { WorkoutdetailsPage } from '../pages/workoutdetails/workoutdetails';
     EntrenadoresPage,
     AparatosPage,
     LogoutPage,
-    WorkoutdetailsPage
+    WorkoutdetailsPage,
+    LessonsdetailsPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -60,7 +62,8 @@ import { WorkoutdetailsPage } from '../pages/workoutdetails/workoutdetails';
     EntrenadoresPage,
     AparatosPage,
     LogoutPage,
-    WorkoutdetailsPage
+    WorkoutdetailsPage,
+    LessonsdetailsPage
   ],
   providers: [Api, Storage, Data, {provide: ErrorHandler, useClass: IonicErrorHandler}]
 })
