@@ -5,5 +5,3 @@ import { MenuController } from 'ionic-angular';
 
 
 platformBrowserDynamic().bootstrapModule(AppModule);
-
-

@@ -22270,6 +22270,138 @@ ion-menu {
   width: calc(100% - 144px);
 }
 
+.header {
+  height: 140px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(143.46deg, darkorange 0%, #ff6236 100%);
+}
+
+.header img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  max-height: 68px;
+}
+
+.header .header--title {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  font-size: 24px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.header--padding {
+  height: 140px;
+  width: 100%;
+}
+
+.toolbar-background,
+.toolbar-background-md,
+.toolbar-background-ios {
+  background: none;
+  color: #ffffff;
+}
+
+@font-face {
+  font-family: 'TeXGyreHeros';
+  src: url("/fonts/TeXGyreHeros-Regular.eot");
+  src: url("/fonts/TeXGyreHeros-Regular.eot?#iefix") format("embedded-opentype"), url("/fonts/TeXGyreHeros-Regular.woff") format("woff"), url("/fonts/TeXGyreHeros-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TeXGyreHeros';
+  src: url("/fonts/TeXGyreHeros-Bold.eot");
+  src: url("/fonts/TeXGyreHeros-Bold.eot?#iefix") format("embedded-opentype"), url("/fonts/TeXGyreHeros-Bold.woff") format("woff"), url("/fonts/TeXGyreHeros-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TeXGyreHeros';
+  src: url("/fonts/TeXGyreHeros-BoldItalic.eot");
+  src: url("/fonts/TeXGyreHeros-BoldItalic.eot?#iefix") format("embedded-opentype"), url("/fonts/TeXGyreHeros-BoldItalic.woff") format("woff"), url("/fonts/TeXGyreHeros-BoldItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Monaco';
+  src: url("/fonts/Monaco.eot");
+  src: url("/fonts/Monaco.eot?#iefix") format("embedded-opentype"), url("/fonts/Monaco.woff") format("woff"), url("/fonts/Monaco.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+back-button {
+  height: 24px;
+  width: 24px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+nav-header {
+  height: 140px;
+  width: 100%;
+  background: linear-gradient(143.46deg, darkorange 0%, #ff6236 100%);
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+nav-header .go-back {
+  height: 24px;
+  width: 24px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: absolute;
+  bottom: 18px;
+  left: 18px;
+}
+
+nav-header .go-back div {
+  height: 18px;
+  width: 18px;
+  border-left: solid 2px #ffffff;
+  border-top: solid 2px #ffffff;
+  -webkit-transform: rotateZ(-45deg);
+  transform: rotateZ(-45deg);
+}
+
+nav-header .header__section {
+  font-size: 21px;
+  font-weight: bold;
+  color: #ffffff;
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  text-transform: uppercase;
+}
+
 .menu--toggle {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -22313,38 +22445,6 @@ ion-menu {
 .menu--toggle .line-3 {
   top: 16px;
   left: 0px;
-}
-
-@font-face {
-  font-family: 'TeXGyreHeros';
-  src: url("/fonts/TeXGyreHeros-Regular.eot");
-  src: url("/fonts/TeXGyreHeros-Regular.eot?#iefix") format("embedded-opentype"), url("/fonts/TeXGyreHeros-Regular.woff") format("woff"), url("/fonts/TeXGyreHeros-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'TeXGyreHeros';
-  src: url("/fonts/TeXGyreHeros-Bold.eot");
-  src: url("/fonts/TeXGyreHeros-Bold.eot?#iefix") format("embedded-opentype"), url("/fonts/TeXGyreHeros-Bold.woff") format("woff"), url("/fonts/TeXGyreHeros-Bold.ttf") format("truetype");
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'TeXGyreHeros';
-  src: url("/fonts/TeXGyreHeros-BoldItalic.eot");
-  src: url("/fonts/TeXGyreHeros-BoldItalic.eot?#iefix") format("embedded-opentype"), url("/fonts/TeXGyreHeros-BoldItalic.woff") format("woff"), url("/fonts/TeXGyreHeros-BoldItalic.ttf") format("truetype");
-  font-weight: bold;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Monaco';
-  src: url("/fonts/Monaco.eot");
-  src: url("/fonts/Monaco.eot?#iefix") format("embedded-opentype"), url("/fonts/Monaco.woff") format("woff"), url("/fonts/Monaco.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
 }
 
 page-dashboard .dashboard {

@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 /* import providers */
-	import { Api } from '../../providers/api';
+import { Api } from '../../providers/api';
 
-  import { LessonsdetailsPage } from '../lessonsdetails/lessonsdetails';
+import { LessonsdetailsPage } from '../lessonsdetails/lessonsdetails';
 
 
 /*
@@ -37,8 +37,9 @@ public lessons: any;
 
   }
 
+
   goTo(id, gid, tid){
-  this.navCtrl.push(LessonsdetailsPage, { idLesson: id , gymId: gid, teacherId: tid});
+    this.navCtrl.push(LessonsdetailsPage, { idLesson: id , gymId: gid, teacherId: tid});
   }
 
 }
