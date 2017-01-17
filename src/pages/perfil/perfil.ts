@@ -2,21 +2,23 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
 /* import providers */
-	import { Api } from '../../providers/api';
+import { Api } from '../../providers/api';
 
 /* improt related pages */
-	import { AddGymPage } from '../add-gym/add-gym';
+import { AddGymPage } from '../add-gym/add-gym';
+import { NavbarTitle } from "../../providers/navbar-title";
 
 @Component({
   selector: 'page-gym',
   templateUrl: 'perfil.html',
-  providers: [Api]
+  providers: [Api, NavbarTitle]
 })
 export class PerfilPage {
 	public user: any;
 	public gyms: any;
-
-	constructor(public navCtrl: NavController, public navParams: NavParams, public apiCtrl: Api) {
+	// public t
+	constructor(public navTitle: NavbarTitle, public navCtrl: NavController, public navParams: NavParams, public apiCtrl: Api) {
+		navTitle.setTitle("Mi Perfil");
 		this.apiCtrl.get('http://gymapp-nuva.herokuapp.com/api/user')
 		.then(data => {
 			this.user = data;

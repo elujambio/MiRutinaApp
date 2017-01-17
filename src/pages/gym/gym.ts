@@ -2,21 +2,24 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
 /* import providers */
-	import { Api } from '../../providers/api';
+import { Api } from '../../providers/api';
 
 /* improt related pages */
-	import { AddGymPage } from '../add-gym/add-gym';
+import { AddGymPage } from '../add-gym/add-gym';
+import { NavbarTitle } from "../../providers/navbar-title";
 
 @Component({
   selector: 'page-gym',
   templateUrl: 'gym.html',
-  providers: [Api]
+  providers: [Api, NavbarTitle]
 })
 export class GymPage {
 	public user: any;
 	public gyms: any;
-
-	constructor(public navCtrl: NavController, public navParams: NavParams, public apiCtrl: Api) {}
+	public title: any; 
+	constructor(public navTitle: NavbarTitle, public navCtrl: NavController, public navParams: NavParams, public apiCtrl: Api) {
+	    navTitle.setTitle("Gimnasio");
+	}
 
 	ionViewDidLoad() {
 

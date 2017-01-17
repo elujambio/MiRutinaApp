@@ -4,33 +4,27 @@
   </ion-navbar>
 </ion-header> -->
 <!-- <back-button></back-button> -->
-<ion-content padding>
+<ion-content>
 <nav-header></nav-header>
 
-<a *ngIf="!workouts?.created"> </a>
-  <ion-card>
-  		<ion-card-header>
-  			{{ workouts?.enrolled[0].name }}
-  		</ion-card-header>
-  		<ion-card-content>
-  			{{ workouts?.enrolled[0].pivot.workout_id }}
-        <ion-item (click)="goTo(workouts?.enrolled[0].pivot.workout_id)">
-          <button ion-button block>Detalles</button>
-        </ion-item>
-  		</ion-card-content>
-  	</ion-card>
-
     <ion-card>
-  		<ion-card-header>
-  			{{ workouts?.enrolled[1].name }}
-  		</ion-card-header>
-  		<ion-card-content>
-  			{{ workouts?.enrolled[1].pivot.workout_id }}
         <ion-item (click)="goTo(workouts?.enrolled[1].pivot.workout_id)">
           <button ion-button block>Detalles</button>
         </ion-item>
-  		</ion-card-content>
   	</ion-card>
 
   <timer #timer [timeInSeconds]="60"></timer>
+
+  <div *ngFor = "let workout of workouts?.enrolled">
+    lala
+  </div>
+
 </ion-content>
+
+<!-- 
+
+  ngIf workouts.enrolled.length > 0  
+  ngFor enrolled for each let enrolled of workouts.enrolled  
+
+
+-->

@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 /* import providers */
-	import { Api } from '../../providers/api';
+import { Api } from '../../providers/api';
+import { NavbarTitle } from "../../providers/navbar-title";
 
 /*
   Generated class for the Lessonsdetails page.
@@ -12,7 +13,7 @@ import { NavController, NavParams } from 'ionic-angular';
 @Component({
   selector: 'page-lessonsdetails',
   templateUrl: 'lessonsdetails.html',
-      providers: [Api]
+    providers: [Api, NavbarTitle]
 })
 export class LessonsdetailsPage {
 public idLesson: any;
@@ -20,27 +21,27 @@ public details: any;
 public teacher: any;
 public gymid: any;
 public teacherid: any;
+public title = ""; 
 
-
-
-  constructor(public navCtrl: NavController, public navParams: NavParams, public apiCtrl: Api) {
-
-  }
-
-  ionViewDidLoad() {
-    //console.log('ionViewDidLoad LessonsdetailsPage');
+  constructor(public navTitle: NavbarTitle, public navCtrl: NavController, public navParams: NavParams, public apiCtrl: Api) {
+        //console.log('ionViewDidLoad LessonsdetailsPage');
     this.idLesson = this.navParams.get('idLesson');
     this.gymid = this.navParams.get('gymId');
     this.teacherid = this.navParams.get('teacherId');
     this.apiCtrl.get('http://gymapp-nuva.herokuapp.com/api/lesson/'+this.idLesson)
       .then(data => {
         this.details = data;
+        navTitle.setTitle(this.details.name); 
       });
       this.apiCtrl.get('http://gymapp-nuva.herokuapp.com/api/gym/'+this.gymid+"/user/"+this.teacherid)
         .then(data => {
           this.teacher = data;
-        console.log(this.teacher);
+          console.log(this.teacher);
         });
+  }
+
+  ionViewDidLoad() {
+
   }
 
 

@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { ViewController } from 'ionic-angular';
+import { NavTitleController } from '../components/nav-title/nav-title';
+import { NavbarTitle } from "../../providers/navbar-title";
 
 /*
   Generated class for the NavHeader component.
@@ -14,15 +16,18 @@ import { ViewController } from 'ionic-angular';
 })
 export class NavHeaderComponent {
 
-  current_title: any; 
   section_image: string;
+  title: string; 
 
-  constructor(public viewCtrl: ViewController, public navCtrl: NavController, public navParams: NavParams) {
-    console.log(navCtrl);
-    this.current_title = navCtrl.getActiveChildNav();
+  constructor(public navTitle: NavbarTitle, public viewCtrl: ViewController, public navCtrl: NavController, public navParams: NavParams) {
+    this.title = navTitle.getTitle();
   }
-  // update() 
+  update() {
+    this.title = this.navTitle.getTitle();
+
+  } 
   goBack() {
     this.navCtrl.pop();
   }
+
 }

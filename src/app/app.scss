@@ -40,6 +40,21 @@ $orange: #FF6236;
 $orange-gradient: linear-gradient(143.46deg, rgba(255, 140, 0, 1) 0%, rgba(255, 98, 54, 1) 100%);
 $set-gradient: linear-gradient(90deg, rgba(49, 0, 0, 1) 32.45%, rgba(255, 98, 54, 1) 100%);
 
+.action-button {
+	margin-top:  18px;
+	text-align:  left;
+	border-radius:  5px; 
+	transform:  skewX(-9deg);
+	background:  $orange-gradient; 
+	padding:  18px; 
+	margin-bottom:  18px;
+	font-size:  18px;
+	color:  #ffffff;	
+	text-transform:  uppercase; 
+	font-weight:  bold;	
+
+}
+
 .header {
 	height:  140px; 
 	width:  100%; 
