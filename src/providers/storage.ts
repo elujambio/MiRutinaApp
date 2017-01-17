@@ -23,4 +23,16 @@ export class Data {
 		this.storage.set('credentials', newData);
 	}
 
+  clear(){
+    this.storage.clear();
+  }
+
+  remove(param){
+  this.storage.remove(param);
+  }
+
+  keys(){
+  this.storage.keys();
+  }
+
 }

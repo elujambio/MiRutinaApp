@@ -21,7 +21,18 @@
 <h3> {{details?.max_students}} </h3>
 <h4> {{teacher?.name}} </h4>
 
-<h4> Horario dummy: 1-2 </h4>
+<h4> Horario:</h4>
+
+<ion-card *ngFor="let lecture of details?.lectures">
+  <ion-card-header>
+    {{ lecture.day }}
+  </ion-card-header>
+  <ion-card-content>
+    {{ lesson.starts }}
+    {{ lesson.ends }}
+  </ion-card-content>
+</ion-card>
+
 
 <ion-item (click)="showAlertPopup()">
   <button ion-button block>Inscribirse</button>

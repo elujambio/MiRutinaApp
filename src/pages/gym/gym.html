@@ -7,18 +7,19 @@
 			</ion-buttons>
 		</ion-navbar>
 	</ion-toolbar>
-	
+
 </ion-header>
 
 
 <ion-content padding>
 
-	<ion-card *ngFor="let gym of gyms">
+	<ion-card >
 		<ion-card-header>
-			{{ gym.name }}
+			{{ gyms?.name }}
 		</ion-card-header>
 		<ion-card-content>
-			{{ gym.address }}
+			{{ gyms?.opens }}
+			{{ gyms?.closes }}
 		</ion-card-content>
 	</ion-card>
 </ion-content>
