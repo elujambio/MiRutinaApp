@@ -13,15 +13,24 @@
 
 
 <ion-content>
-<nav-header></nav-header>		
-<h1>{{ user?.name }} </h1>
-<h1> Member since: ({{ user?.role.created_at}})</h1>
 
-<ion-card >
-	<ion-card-header>
-	Peso
-	</ion-card-header>
-	<ion-card-content>
-	70 kg
-	</ion-card-content>
-</ion-card>
+<nav-header></nav-header>	
+
+<div class="profile-container">
+	<div class="user">
+		<div class="user__image">
+			<img src="{{ user?.img }}">
+		</div>	
+		<div class="user__name">{{ user?.name }} </div>
+	</div>
+	<h1> Member since: ({{ user?.role.created_at}})</h1>
+
+	<ion-card >
+		<ion-card-header>
+		Peso
+		</ion-card-header>
+		<ion-card-content>
+		70 kg
+		</ion-card-content>
+	</ion-card>
+</div>

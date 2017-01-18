@@ -22764,3 +22764,43 @@ page-login button {
   text-transform: uppercase;
   font-weight: bold;
 }
+
+page-gym .profile-container {
+  padding: 18px;
+  width: 100%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+page-gym .user {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+page-gym .user__image {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 36px;
+  width: 36px;
+  margin-right: 12px;
+  border-radius: 18px;
+  border: solid 2px #FF6236;
+}
+
+page-gym .user__name {
+  font-weight: bold;
+  font-size: 21px;
+  color: #000000;
+}
