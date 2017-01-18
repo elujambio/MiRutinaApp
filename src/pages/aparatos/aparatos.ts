@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { NavbarTitle } from "../../providers/navbar-title";
 /* import providers */
 	import { Api } from '../../providers/api';
 /*
@@ -11,16 +12,18 @@ import { NavController, NavParams } from 'ionic-angular';
 @Component({
   selector: 'page-aparatos',
   templateUrl: 'aparatos.html',
-  providers: [Api]
+  providers: [Api, NavbarTitle]
 })
 export class AparatosPage {
 public gymid: any;
 public equipments: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public apiCtrl: Api) {}
+  constructor(public navTitle: NavbarTitle, public navCtrl: NavController, public navParams: NavParams, public apiCtrl: Api) {
+	navTitle.setTitle('Aparatos');
+	}
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad AparatosPage');
+    
     this.gymid = this.navParams.get('gymId');
     this.apiCtrl.get('http://gymapp-nuva.herokuapp.com/api/gym/'+this.gymid+'/equipment')
       .then(data => {

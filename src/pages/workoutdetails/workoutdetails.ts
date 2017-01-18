@@ -3,6 +3,7 @@ import { NavController, NavParams } from 'ionic-angular';
 import {ViewChild} from '@angular/core';
 /* import providers */
 	import { Api } from '../../providers/api';
+	import { NavbarTitle } from "../../providers/navbar-title";
 
   import { TimerComponent } from '../timer/timer';
 
@@ -15,18 +16,20 @@ import {ViewChild} from '@angular/core';
 @Component({
   selector: 'page-workoutdetails',
   templateUrl: 'workoutdetails.html',
-  providers: [Api]
+  providers: [Api, NavbarTitle]
 })
 export class WorkoutdetailsPage {
 public workouts: any;
 public id_workout: any;
 public exercises: any;
 public exerciseid: any;
+public name: any;
 
   @ViewChild(TimerComponent) timer: TimerComponent;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public apiCtrl: Api) {
-
+  constructor(public navTitle: NavbarTitle, public navCtrl: NavController, public navParams: NavParams, public apiCtrl: Api) {
+	this.name = this.navParams.get('workoutName');
+  navTitle.setTitle(this.name);
   }
 
   ionViewDidLoad() {
@@ -39,10 +42,28 @@ public exerciseid: any;
 
   }
 
-  ngOnInit() {
-    setTimeout(() => {
-      this.timer.startTimer();
-    }, 1000)
-  }
+
+startTimer(){
+this.timer.startTimer();
+}
+
+started(){
+return this.timer.hasStart();
+}
+finished(){
+return this.timer.hasFinished();
+}
+
+status(){
+return this.timer.getStatus();
+}
+
+
+pause(){
+this.timer.pauseTimer();
+}
+resume(){
+this.timer.resumeTimer();
+}
 
 }

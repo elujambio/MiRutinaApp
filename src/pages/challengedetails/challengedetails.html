@@ -1,0 +1,44 @@
+<!--
+  Generated template for the Challengedetails page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-content >
+  <nav-header>
+  </nav-header>
+
+  <div class="class--image">
+    <img src="{{ details?.pic_url }}">
+  </div>
+
+  <div class="class--details">
+
+    <h1 class="class--name"> Reto {{ details?.name }} </h1>
+
+    <p class="class--description"> {{ details?.desc }} </p>
+
+    <div class="class--size-and-suscribe">
+      <div class="class--size">
+        <label>Tamaño del reto:</label>
+        <h3 class="class--quota"> {{ details?.places }} </h3>
+      </div>
+      <div class="action-button" (click)="showAlertPopup()">Inscríbete</div>
+    </div>
+  </div>
+
+  <h4> Miembros Inscritos:</h4>
+
+  <ion-card *ngFor="let detail of details?.enrolled">
+    <ion-card-header>
+      {{ detail.name }}
+    </ion-card-header>
+    <ion-card-content>
+    Peso:  {{ detail.weight }}
+    BMI:  {{ detail.bodymass_index }}
+    </ion-card-content>
+  </ion-card>
+
+
+</ion-content>
