@@ -17,6 +17,7 @@ import { NavController, NavParams } from 'ionic-angular';
 	import { AparatosPage } from '../aparatos/aparatos';
 	import { LogoutPage } from '../logout/logout';
 	import { LoginPage } from '../login/login';
+	import { RutinasPage } from '../rutinas/rutinas';
 
 @Component({
   selector: 'page-dashboard',
@@ -40,10 +41,12 @@ export class DashboardPage {
 		else if (page === 'entrenadores') this.navCtrl.push(EntrenadoresPage, {user: this.user, title: "Entrenadores" });
 		else if (page === 'aparatos') this.navCtrl.push(AparatosPage, {user: this.user, title: "Aparatos" });
 		else if (page === 'logout') this.navCtrl.push(LogoutPage, {user: this.user, title: "Cerrar Sesión" });
+		else if (page === 'rutinas') this.navCtrl.push(RutinasPage, {user: this.user});
 	}
 	open(id, page){
 	if (page === 'perfil') this.navCtrl.push(PerfilPage, {user: this.user, gymId: id});
 	else if (page === 'aparatos') this.navCtrl.push(AparatosPage, {user: this.user, gymId: id});
+	else if (page === 'entrenadores') this.navCtrl.push(EntrenadoresPage, {user: this.user, gymId: id});
 	}
 
 logout(){

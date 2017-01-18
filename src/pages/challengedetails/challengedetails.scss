@@ -1,0 +1,68 @@
+page-challengedetails {
+
+  
+  .class--image {
+    display:  flex;
+    height:  144px;
+    width:  100%;
+    background-color:  $orange;
+  }
+  .class--details {
+    height:  auto;
+    width:  100%;
+    padding:  18px;
+    display:  flex;
+    flex-direction:  column;
+
+  }
+  .class--name {
+    font-size:  24px;
+    font-weight:  bold;
+    text-style:  italic;
+    text-transform:  uppercase;
+  }
+  .class--teacher {
+    display:  flex;
+    flex-direction:  row;
+    align-items:  center;
+    justify-content:  flex-start;
+    color:  #212121;
+  }
+  .teacher__image {
+    height:  36px;
+    width:  36px;
+    border-radius:  18px;
+    border:  solid 2px $orange;
+    margin-right:  12px;
+  }
+  .teacher__name {
+    font-size:  18px;
+    font-weight:  bold;
+  }
+  .class--description {
+    font-size:  18px;
+    color:  #424242;
+    line-height:  175%;
+    margin-bottom:  36px;
+  }
+  .class--size-and-suscribe {
+    display:  flex;
+    flex-direction:  row;
+    align-items:  center;
+    justify-content:  space-between;
+
+    width:  100%;
+    label {
+      font-size:  12px;
+      font-weight:  bold;
+      color:  #000000;
+    }
+    .class--quota {
+      font-size:  21px;
+      font-weight:  bold;
+    }
+  }
+
+
+
+}

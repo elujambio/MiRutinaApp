@@ -1,5 +1,10 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { NavbarTitle } from "../../providers/navbar-title";
+import { ChallengedetailsPage } from '../challengedetails/challengedetails';
+
+/* import providers */
+import { Api } from '../../providers/api';
 
 /*
   Generated class for the Organisation page.
@@ -9,14 +14,26 @@ import { NavController, NavParams } from 'ionic-angular';
 */
 @Component({
   selector: 'page-organisation',
-  templateUrl: 'organisation.html'
+  templateUrl: 'organisation.html',
+  providers: [Api, NavbarTitle]
 })
 export class OrganisationPage {
+public challenges: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {}
+  constructor(public navTitle: NavbarTitle, public navCtrl: NavController, public navParams: NavParams, public apiCtrl: Api) {
+  navTitle.setTitle("Retos");
+  }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad OrganisationPage');
+  this.apiCtrl.get('http://gymapp-nuva.herokuapp.com/api/challenge')
+    .then(data => {
+      this.challenges = data;
+    });
+
+  }
+
+  goTo(id, name){
+   this.navCtrl.push(ChallengedetailsPage, { idChallenge: id, nameChallenge: name });
   }
 
 }
