@@ -28,7 +28,7 @@ public title = "";
     this.idLesson = this.navParams.get('idLesson');
     this.gymid = this.navParams.get('gymId');
     this.teacherid = this.navParams.get('teacherId');
-    this.apiCtrl.get('http://gymapp-nuva.herokuapp.com/api/lesson/'+this.idLesson)
+    this.apiCtrl.get('http://gymapp-nuva.herokuapp.com/api/lesson/'+this.idLesson+'/lecture')
       .then(data => {
         this.details = data;
         navTitle.setTitle(this.details.name); 

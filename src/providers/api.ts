@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Component, ElementRef, Input, Injectable } from '@angular/core';
 import { Http, Headers } from '@angular/http';
 import 'rxjs/add/operator/map';
 
@@ -9,7 +9,8 @@ export class Api {
 	public data: any;
 	public credentials: any;
 
-	constructor(public http: Http, public dataCtrl: Data) { }
+	constructor(public http: Http, public dataCtrl: Data,
+                private el: ElementRef) { }
 
 	get(url) {
 
@@ -52,6 +53,7 @@ export class Api {
 	getHeaders() {
 
 		if (this.credentials) {
+		console.log(this.credentials);
 			return Promise.resolve(JSON.parse(this.credentials));
 		}
 
@@ -71,7 +73,7 @@ export class Api {
 
 		});
 
-		
+
 
 	}
 

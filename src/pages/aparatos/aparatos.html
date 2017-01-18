@@ -14,5 +14,13 @@
 
 
 <ion-content padding>
-
+  <ion-card *ngFor="let equipment of equipments">
+    <ion-card-header>
+      {{ equipment.name }}
+    </ion-card-header>
+    <ion-card-content>
+      {{equipment.img}}
+      {{ equipment.status }}
+    </ion-card-content>
+  </ion-card>
 </ion-content>

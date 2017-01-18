@@ -4,6 +4,9 @@ import { NavController, NavParams } from 'ionic-angular';
 /* import providers */
 	import { Api } from '../../providers/api';
 
+	/* import providers */
+		import { Data } from '../../providers/storage';
+
 /* import related pages */
 	import { OrganisationPage } from '../organisation/organisation';
 	import { GymPage } from '../gym/gym';
@@ -13,22 +16,19 @@ import { NavController, NavParams } from 'ionic-angular';
 	import { EntrenadoresPage } from '../entrenadores/entrenadores';
 	import { AparatosPage } from '../aparatos/aparatos';
 	import { LogoutPage } from '../logout/logout';
+	import { LoginPage } from '../login/login';
 
 @Component({
   selector: 'page-dashboard',
   templateUrl: 'dashboard.html',
-  providers: [Api]
+  providers: [Api, Data]
 })
 export class DashboardPage {
 
 	public user: any;
 
-	constructor(public navCtrl: NavController, public navParams: NavParams, public apiCtrl: Api) {
-		this.apiCtrl.get('http://gymapp-nuva.herokuapp.com/api/user')
-		.then(data => {
-			this.user = data;
-			console.log(this.user);
-		});
+	constructor(public navCtrl: NavController, public navParams: NavParams, public apiCtrl: Api, public dataCtrl: Data) {
+	this.user = this.navParams.get('user');
 	}
 
 	goTo(page) {
@@ -41,8 +41,15 @@ export class DashboardPage {
 		else if (page === 'aparatos') this.navCtrl.push(AparatosPage, {user: this.user, title: "Aparatos" });
 		else if (page === 'logout') this.navCtrl.push(LogoutPage, {user: this.user, title: "Cerrar Sesión" });
 	}
-	open(id){
-	this.navCtrl.push(PerfilPage, {user: this.user, gymId: id});
+	open(id, page){
+	if (page === 'perfil') this.navCtrl.push(PerfilPage, {user: this.user, gymId: id});
+	else if (page === 'aparatos') this.navCtrl.push(AparatosPage, {user: this.user, gymId: id});
 	}
+
+logout(){
+//this.dataCtrl.remove('credentials');
+this.navCtrl.push(LoginPage);
+}
+
 
 }

@@ -44,4 +44,16 @@
 		</div>
 	</div>
 
+	<h4> Horario:</h4>
+
+	<ion-card *ngFor="let lecture of details?.lectures">
+	  <ion-card-header>
+	    {{ lecture.day }}
+	  </ion-card-header>
+	  <ion-card-content>
+	    {{ lecture.starts }}
+	    {{ lecture.ends }}
+	  </ion-card-content>
+	</ion-card>	
+
 </ion-content>
