@@ -123,10 +123,10 @@
 			</div>	
 		</div>	
 
-		<h4 class="class--day-title">Domingo</h4>
 
-		<div *ngFor="let lecture of details?.lectures" class="class--day-container">
-			<div class="class--timetable" *ngIf=" lecture.day == 'Domingo' ">
+		<div *ngFor="let lecture of details?.lectures" class="class--day-container" [let-i]="index">
+			<div class="class--timetable" *ngIf=" 
+			lecture.day == 'Domingo' ">
 			  <div class="timetable--day">
 			    {{ lecture.day }}
 			  </div>
