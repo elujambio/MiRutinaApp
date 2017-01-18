@@ -1,4 +1,4 @@
-<ion-header>
+<!-- <ion-header>
 	<ion-toolbar color="primary">
 		<ion-navbar>
 			<ion-title>Perfil</ion-title>
@@ -9,23 +9,33 @@
 	</ion-toolbar>
 
 </ion-header>
+ -->
 
+<nav-header></nav-header>	
 
-<ion-content padding>
-<h4>{{user?.img}}</h4>
-<h1>{{ user?.name }} </h1>
-<h1> Member since: ({{ user?.created_at}})</h1>
-<h4>Edad: {{user?.age}}</h4>
-<h4>Altura: {{user?.height}}</h4>
-<h4>Peso: {{user?.weight}}</h4>
-<h4>Indice de Masa Corporal: {{user?.bodymass_index}}</h4>
+<div class="profile-container">
+	<div class="user">
+		<div class="user__image">
+			<img src="{{ user?.img }}">
+		</div>	
+		<div class="user__name">{{ user?.name }} </div>
+	</div>
+	<h1> Member since: ({{ user?.role.created_at}})</h1>
 
-<h3>Enrolled at: {{gyms?.name}}</h3>
-<ion-card >
-	<ion-card-header>
-	Peso
-	</ion-card-header>
-	<ion-card-content>
-	70 kg
-	</ion-card-content>
-</ion-card>
+	<p>{{user?.img}}</p>
+	<p>{{ user?.name }} </p>
+	<p> Member since: ({{ user?.created_at}})</p>
+	<p>Edad: {{user?.age}}</p>
+	<p>Altura: {{user?.height}}</p>
+	<p>Peso: {{user?.weight}}</p>
+	<p>Indice de Masa Corporal: {{user?.bodymass_index}}</p>
+
+	<ion-card >
+		<ion-card-header>
+		Peso
+		</ion-card-header>
+		<ion-card-content>
+		70 kg
+		</ion-card-content>
+	</ion-card>
+</div>

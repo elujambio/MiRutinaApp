@@ -32,14 +32,14 @@ export class DashboardPage {
 	}
 
 	goTo(page) {
-		if (page === 'organisation') this.navCtrl.push(OrganisationPage, { user: this.user });
-		else if (page === 'gym') this.navCtrl.push(GymPage, { user: this.user });
-		else if (page === 'perfil') this.navCtrl.push(PerfilPage, {user: this.user});
-		else if (page === 'show') this.navCtrl.push(ShowPage, {user: this.user});
-		else if (page === 'clases') this.navCtrl.push(ClasesPage, {user: this.user});
-		else if (page === 'entrenadores') this.navCtrl.push(EntrenadoresPage, {user: this.user});
-		else if (page === 'aparatos') this.navCtrl.push(AparatosPage, {user: this.user});
-		else if (page === 'logout') this.navCtrl.push(LogoutPage, {user: this.user});
+		if (page === 'organisation') this.navCtrl.push(OrganisationPage, { user: this.user, title: "Organización"  });
+		else if (page === 'gym') this.navCtrl.push(GymPage, { user: this.user, title: "Gimnasio"  });
+		else if (page === 'perfil') this.navCtrl.push(PerfilPage, {user: this.user, title: "Perfil" });
+		else if (page === 'show') this.navCtrl.push(ShowPage, {user: this.user, title: "Mi Rutina" });
+		else if (page === 'clases') this.navCtrl.push(ClasesPage, {user: this.user, title: "Clases" });
+		else if (page === 'entrenadores') this.navCtrl.push(EntrenadoresPage, {user: this.user, title: "Entrenadores" });
+		else if (page === 'aparatos') this.navCtrl.push(AparatosPage, {user: this.user, title: "Aparatos" });
+		else if (page === 'logout') this.navCtrl.push(LogoutPage, {user: this.user, title: "Cerrar Sesión" });
 	}
 	open(id, page){
 	if (page === 'perfil') this.navCtrl.push(PerfilPage, {user: this.user, gymId: id});

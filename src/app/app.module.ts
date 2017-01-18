@@ -23,6 +23,9 @@ import { AparatosPage } from '../pages/aparatos/aparatos';
 import { LogoutPage } from '../pages/logout/logout';
 import { WorkoutdetailsPage } from '../pages/workoutdetails/workoutdetails';
 import { LessonsdetailsPage } from '../pages/lessonsdetails/lessonsdetails';
+import { BackButtonComponent } from '../components/back-button/back-button';
+import { NavHeaderComponent } from '../components/nav-header/nav-header';
+
 
 @NgModule({
   declarations: [
@@ -41,10 +44,12 @@ import { LessonsdetailsPage } from '../pages/lessonsdetails/lessonsdetails';
     AparatosPage,
     LogoutPage,
     WorkoutdetailsPage,
-    LessonsdetailsPage
+    LessonsdetailsPage,
+    NavHeaderComponent,
+    BackButtonComponent
   ],
   imports: [
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp, { mode: "md" })
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -63,7 +68,9 @@ import { LessonsdetailsPage } from '../pages/lessonsdetails/lessonsdetails';
     AparatosPage,
     LogoutPage,
     WorkoutdetailsPage,
-    LessonsdetailsPage
+    LessonsdetailsPage,
+    NavHeaderComponent,
+    BackButtonComponent
   ],
   providers: [Api, Storage, Data, {provide: ErrorHandler, useClass: IonicErrorHandler}]
 })
