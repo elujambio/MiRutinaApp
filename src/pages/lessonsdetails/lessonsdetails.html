@@ -42,18 +42,101 @@
 			</div>
 			<div class="action-button" (click)="showAlertPopup()">Inscríbete</div>
 		</div>
+
+		<h4>Horario:</h4>
+
+		<h4 class="class--day-title">Lunes</h4>
+
+		<div *ngFor="let lecture of details?.lectures" class="class--day-container">
+			<div class="class--timetable" *ngIf=" lecture.day == 'Lunes' ">
+			  <div class="timetable--day">
+			    {{ lecture.day }}
+			  </div>
+			  <div class="timetable--schedule">
+			    {{ lecture.starts }} a {{ lecture.ends }}
+			  </div>
+			</div>	
+		</div>	
+
+		<h4 class="class--day-title">Martes</h4>
+
+		<div *ngFor="let lecture of details?.lectures" class="class--day-container">
+			<div class="class--timetable" *ngIf=" lecture.day == 'Martes' ">
+			  <div class="timetable--day">
+			    {{ lecture.day }}
+			  </div>
+			  <div class="timetable--schedule">
+			    {{ lecture.starts }} a {{ lecture.ends }}
+			  </div>
+			</div>	
+		</div>	
+
+		<h4 class="class--day-title">Miércoles</h4>
+
+		<div *ngFor="let lecture of details?.lectures" class="class--day-container">
+			<div class="class--timetable" *ngIf=" lecture.day == 'Miércoles' ">
+			  <div class="timetable--day">
+			    {{ lecture.day }}
+			  </div>
+			  <div class="timetable--schedule">
+			    {{ lecture.starts }} a {{ lecture.ends }}
+			  </div>
+			</div>	
+		</div>	
+
+		<h4 class="class--day-title">Jueves</h4>
+
+		<div *ngFor="let lecture of details?.lectures" class="class--day-container">
+			<div class="class--timetable" *ngIf=" lecture.day == 'Jueves' ">
+			  <div class="timetable--day">
+			    {{ lecture.day }}
+			  </div>
+			  <div class="timetable--schedule">
+			    {{ lecture.starts }} a {{ lecture.ends }}
+			  </div>
+			</div>	
+		</div>	
+
+		<h4 class="class--day-title">Viernes</h4>
+
+		<div *ngFor="let lecture of details?.lectures" class="class--day-container">
+			<div class="class--timetable" *ngIf=" lecture.day == 'Viernes' ">
+			  <div class="timetable--day">
+			    {{ lecture.day }}
+			  </div>
+			  <div class="timetable--schedule">
+			    {{ lecture.starts }} a {{ lecture.ends }}
+			  </div>
+			</div>	
+		</div>	
+
+		<h4 class="class--day-title">Sábado</h4>
+
+		<div *ngFor="let lecture of details?.lectures" class="class--day-container">
+			<div class="class--timetable" *ngIf=" lecture.day == 'Sábado' ">
+			  <div class="timetable--day">
+			    {{ lecture.day }}
+			  </div>
+			  <div class="timetable--schedule">
+			    {{ lecture.starts }} a {{ lecture.ends }}
+			  </div>
+			</div>	
+		</div>	
+
+
+		<div *ngFor="let lecture of details?.lectures" class="class--day-container" [let-i]="index">
+			<div class="class--timetable" *ngIf=" 
+			lecture.day == 'Domingo' ">
+			  <div class="timetable--day">
+			    {{ lecture.day }}
+			  </div>
+			  <div class="timetable--schedule">
+			    {{ lecture.starts }} a {{ lecture.ends }}
+			  </div>
+			</div>	
+		</div>	
+
+
 	</div>
-
-	<h4> Horario:</h4>
-
-	<ion-card *ngFor="let lecture of details?.lectures">
-	  <ion-card-header>
-	    {{ lecture.day }}
-	  </ion-card-header>
-	  <ion-card-content>
-	    {{ lecture.starts }}
-	    {{ lecture.ends }}
-	  </ion-card-content>
-	</ion-card>	
 
 </ion-content>

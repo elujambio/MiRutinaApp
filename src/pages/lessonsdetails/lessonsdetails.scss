@@ -60,5 +60,21 @@ page-lessonsdetails {
 			font-weight:  bold; 
 		}
 	}
+	.class--timetable {
+		display:  flex; 
+		flex-direction:  row; 
+		align-items:  center; 
+		justify-content:  space-between; 
 
+		padding:  12px; 
+		font-size:  14px; 
+		box-sizing:  border-box; 
+		background:  #fafafa; 
+		color:  #212121; 
+
+		margin-bottom:  8px; 
+	}
+	.class--day-title {
+		
+	}
 }
