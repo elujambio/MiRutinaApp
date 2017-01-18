@@ -18,11 +18,14 @@ import { MyApp } from './app.component';
   import { TimerComponent } from '../pages/timer/timer';
   import { ShowPage } from '../pages/show/show';
   import { ClasesPage } from '../pages/clases/clases';
+  import { RutinasPage } from '../pages/rutinas/rutinas';
   import { EntrenadoresPage } from '../pages/entrenadores/entrenadores';
 import { AparatosPage } from '../pages/aparatos/aparatos';
 import { LogoutPage } from '../pages/logout/logout';
 import { WorkoutdetailsPage } from '../pages/workoutdetails/workoutdetails';
 import { LessonsdetailsPage } from '../pages/lessonsdetails/lessonsdetails';
+import { ChallengedetailsPage } from '../pages/challengedetails/challengedetails';
+import { TrainerdetailsPage } from '../pages/trainerdetails/trainerdetails';
 import { BackButtonComponent } from '../components/back-button/back-button';
 import { NavHeaderComponent } from '../components/nav-header/nav-header';
 
@@ -40,11 +43,14 @@ import { NavHeaderComponent } from '../components/nav-header/nav-header';
     TimerComponent,
     ShowPage,
     ClasesPage,
+    RutinasPage,
     EntrenadoresPage,
     AparatosPage,
     LogoutPage,
     WorkoutdetailsPage,
     LessonsdetailsPage,
+    ChallengedetailsPage,
+    TrainerdetailsPage,
     NavHeaderComponent,
     BackButtonComponent
   ],
@@ -64,11 +70,14 @@ import { NavHeaderComponent } from '../components/nav-header/nav-header';
     TimerComponent,
     ShowPage,
     ClasesPage,
+    RutinasPage,
     EntrenadoresPage,
     AparatosPage,
     LogoutPage,
     WorkoutdetailsPage,
     LessonsdetailsPage,
+    ChallengedetailsPage,
+    TrainerdetailsPage,
     NavHeaderComponent,
     BackButtonComponent
   ],

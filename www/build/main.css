@@ -22462,6 +22462,145 @@ nav-header .header__section {
   left: 0px;
 }
 
+page-aparatos .container {
+  padding: 18px;
+  width: 100%;
+  height: 100%;
+}
+
+page-aparatos .class-card {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  width: 100%;
+  height: 144px;
+  box-sizing: border-box;
+  margin-bottom: 18px;
+  background-color: #fafafa;
+}
+
+page-aparatos .class__info {
+  width: 60%;
+  padding: 8px 18px;
+}
+
+page-aparatos .class__name {
+  font-weight: bold;
+  font-size: 21px;
+  margin-bottom: 8px;
+}
+
+page-aparatos .class__description {
+  color: #424242;
+  font-size: 14px;
+}
+
+page-aparatos .class__image {
+  height: 100%;
+  width: 40%;
+  background-color: #f5f5f5;
+}
+
+page-challengedetails .class--image {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 144px;
+  width: 100%;
+  background-color: #FF6236;
+}
+
+page-challengedetails .class--details {
+  height: auto;
+  width: 100%;
+  padding: 18px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+page-challengedetails .class--name {
+  font-size: 24px;
+  font-weight: bold;
+  text-style: italic;
+  text-transform: uppercase;
+}
+
+page-challengedetails .class--teacher {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  color: #212121;
+}
+
+page-challengedetails .teacher__image {
+  height: 36px;
+  width: 36px;
+  border-radius: 18px;
+  border: solid 2px #FF6236;
+  margin-right: 12px;
+}
+
+page-challengedetails .teacher__name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+page-challengedetails .class--description {
+  font-size: 18px;
+  color: #424242;
+  line-height: 175%;
+  margin-bottom: 36px;
+}
+
+page-challengedetails .class--size-and-suscribe {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 100%;
+}
+
+page-challengedetails .class--size-and-suscribe label {
+  font-size: 12px;
+  font-weight: bold;
+  color: #000000;
+}
+
+page-challengedetails .class--size-and-suscribe .class--quota {
+  font-size: 21px;
+  font-weight: bold;
+}
+
 page-clases .container {
   padding: 18px;
   width: 100%;
@@ -22617,6 +22756,54 @@ page-dashboard .dashboard__menu__column:nth-of-type(2) .dashboard__menu__item:nt
   height: 120px;
 }
 
+page-entrenadores .container {
+  padding: 18px;
+  width: 100%;
+  height: 100%;
+}
+
+page-entrenadores .class-card {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  width: 100%;
+  height: 144px;
+  box-sizing: border-box;
+  margin-bottom: 18px;
+  background-color: #fafafa;
+}
+
+page-entrenadores .class__info {
+  width: 60%;
+  padding: 8px 18px;
+}
+
+page-entrenadores .class__name {
+  font-weight: bold;
+  font-size: 21px;
+  margin-bottom: 8px;
+}
+
+page-entrenadores .class__description {
+  color: #424242;
+  font-size: 14px;
+}
+
+page-entrenadores .class__image {
+  height: 100%;
+  width: 40%;
+  background-color: #f5f5f5;
+}
+
 page-lessonsdetails .class--image {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -22765,6 +22952,54 @@ page-login button {
   font-weight: bold;
 }
 
+page-organisation .container {
+  padding: 18px;
+  width: 100%;
+  height: 100%;
+}
+
+page-organisation .class-card {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  width: 100%;
+  height: 144px;
+  box-sizing: border-box;
+  margin-bottom: 18px;
+  background-color: #fafafa;
+}
+
+page-organisation .class__info {
+  width: 60%;
+  padding: 8px 18px;
+}
+
+page-organisation .class__name {
+  font-weight: bold;
+  font-size: 21px;
+  margin-bottom: 8px;
+}
+
+page-organisation .class__description {
+  color: #424242;
+  font-size: 14px;
+}
+
+page-organisation .class__image {
+  height: 100%;
+  width: 40%;
+  background-color: #f5f5f5;
+}
+
 page-gym .profile-container {
   padding: 18px;
   width: 100%;
@@ -22803,4 +23038,225 @@ page-gym .user__name {
   font-weight: bold;
   font-size: 21px;
   color: #000000;
+}
+
+page-rutinas .container {
+  padding: 18px;
+  width: 100%;
+  height: 100%;
+}
+
+page-rutinas .class-card {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  width: 100%;
+  height: 144px;
+  box-sizing: border-box;
+  margin-bottom: 18px;
+  background-color: #fafafa;
+}
+
+page-rutinas .class__info {
+  width: 60%;
+  padding: 8px 18px;
+}
+
+page-rutinas .class__name {
+  font-weight: bold;
+  font-size: 21px;
+  margin-bottom: 8px;
+}
+
+page-rutinas .class__description {
+  color: #424242;
+  font-size: 14px;
+}
+
+page-rutinas .class__image {
+  height: 100%;
+  width: 40%;
+  background-color: #f5f5f5;
+}
+
+page-trainerdetails .class--image {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 144px;
+  width: 100%;
+  background-color: #FF6236;
+}
+
+page-trainerdetails .class--details {
+  height: auto;
+  width: 100%;
+  padding: 18px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+page-trainerdetails .class--name {
+  font-size: 24px;
+  font-weight: bold;
+  text-style: italic;
+  text-transform: uppercase;
+}
+
+page-trainerdetails .class--teacher {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  color: #212121;
+}
+
+page-trainerdetails .teacher__image {
+  height: 36px;
+  width: 36px;
+  border-radius: 18px;
+  border: solid 2px #FF6236;
+  margin-right: 12px;
+}
+
+page-trainerdetails .teacher__name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+page-trainerdetails .class--description {
+  font-size: 18px;
+  color: #424242;
+  line-height: 175%;
+  margin-bottom: 36px;
+}
+
+page-trainerdetails .class--size-and-suscribe {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 100%;
+}
+
+page-trainerdetails .class--size-and-suscribe label {
+  font-size: 12px;
+  font-weight: bold;
+  color: #000000;
+}
+
+page-trainerdetails .class--size-and-suscribe .class--quota {
+  font-size: 21px;
+  font-weight: bold;
+}
+
+page-workoutdetails .container {
+  padding: 18px;
+  width: 100%;
+  height: 100%;
+}
+
+page-workoutdetails .class-card {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  width: 100%;
+  height: 144px;
+  box-sizing: border-box;
+  margin-bottom: 18px;
+  background-color: #fafafa;
+}
+
+page-workoutdetails .set-card {
+  background: #404040;
+  font-family: "TeXGyreHeros";
+  color: #ffffff;
+}
+
+page-workoutdetails .action-button {
+  width: 100%;
+  background: linear-gradient(90deg, #1fbf2e 0%, #33edd9 100%);
+  font-size: 14px;
+  margin-bottom: 18px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+page-workoutdetails .video-button {
+  width: calc(100% - 138px);
+  height: 80px;
+  margin-right: 18px;
+  background: linear-gradient(143.46deg, darkorange 0%, #ff6236 100%);
+  color: #ffffff;
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-pack: center;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+page-workoutdetails .class__info {
+  width: 60%;
+  padding: 8px 18px;
+}
+
+page-workoutdetails .class__name {
+  font-weight: bold;
+  font-size: 21px;
+  margin-bottom: 8px;
+}
+
+page-workoutdetails .class__description {
+  color: #424242;
+  font-size: 14px;
+}
+
+page-workoutdetails .class__image {
+  height: 100%;
+  width: 40%;
+  background-color: #f5f5f5;
 }

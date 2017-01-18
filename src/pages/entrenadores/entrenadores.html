@@ -4,15 +4,26 @@
   See http://ionicframework.com/docs/v2/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<ion-header>
-
-  <ion-navbar>
-    <ion-title>Entrenadores</ion-title>
-  </ion-navbar>
-
-</ion-header>
 
 
-<ion-content padding>
+<ion-content>
+  <nav-header>
+  </nav-header>
+
+
+  <div class="container">
+
+    <div class="class-card" *ngFor="let trainer of trainers" (click)="goTo(trainer.id, trainer.name, trainer.gym_id)">
+      <div class="class__image">
+        <img src="{{lesson.img}}" alt="">
+      </div>
+      <div class="class__info">
+        <div class="class__name">{{ trainer.name }}</div>
+        <div class="class__description">{{ trainer.role.title }}</div>
+      </div>
+
+    </div>
+  </div>
+
 
 </ion-content>

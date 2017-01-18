@@ -4,23 +4,25 @@
   See http://ionicframework.com/docs/v2/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<ion-header>
-
-  <ion-navbar>
-    <ion-title>Aparatos</ion-title>
-  </ion-navbar>
-
-</ion-header>
 
 
-<ion-content padding>
-  <ion-card *ngFor="let equipment of equipments">
-    <ion-card-header>
-      {{ equipment.name }}
-    </ion-card-header>
-    <ion-card-content>
-      {{equipment.img}}
-      {{ equipment.status }}
-    </ion-card-content>
-  </ion-card>
+
+<ion-content>
+  <nav-header>
+  </nav-header>
+
+  <div class="container">
+
+    <div class="class-card" *ngFor="let equipment of equipments" >
+      <div class="class__image">
+        <img src="{{equipment.img}}" alt="">
+      </div>
+      <div class="class__info">
+        <div class="class__name">{{ equipment.name }}</div>
+        <div class="class__description">{{ equipment.status }}</div>
+      </div>
+
+    </div>
+  </div>
+
 </ion-content>
