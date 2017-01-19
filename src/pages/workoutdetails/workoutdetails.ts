@@ -24,7 +24,8 @@ public id_workout: any;
 public exercises: any;
 public exerciseid: any;
 public name: any;
-
+public open: number;
+public e_d: number; 
   @ViewChild(TimerComponent) timer: TimerComponent;
 
   constructor(public navTitle: NavbarTitle, public navCtrl: NavController, public navParams: NavParams, public apiCtrl: Api) {
@@ -42,6 +43,14 @@ public name: any;
 
   }
 
+toggleDetails(newValue: any) {
+  if (this.open === newValue) {
+    this.open = -1;
+  }
+  else {
+    this.open = newValue;
+  }
+}
 
 startTimer(){
 this.timer.startTimer();

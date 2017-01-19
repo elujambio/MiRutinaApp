@@ -17,6 +17,12 @@
 
 @import 'fonts';
 
+// Colors
+
+$orange: #FF6236;
+$orange-gradient: linear-gradient(143.46deg, rgba(255, 140, 0, 1) 0%, rgba(255, 98, 54, 1) 100%);
+$set-gradient: linear-gradient(90deg, rgba(49, 0, 0, 1) 32.45%, rgba(255, 98, 54, 1) 100%);
+
 * {
 	font-family: 'TeXGyreHeros';
 }
@@ -29,16 +35,27 @@ ion-menu {
 	z-index:  100; 
 	background:  #ffffff; 
 	height:  100%; 
-	width:  calc(100% - 144px); 
+	width:  calc(80%); 
+	min-width:  290px; 
+	border-right:  solid 2px $orange; 
+	padding-top:  36px; 
+	box-sizing:  border-box; 
+	ion-list {
+		padding:  18px; 
+		width:  100%; 
 
+	}
+}
+.menu-element {
+	font-size:  28px; 
+	font-weight:  bold; 
+	font-style:  italic; 
+	text-transform:  uppercase;  
+	color:  $orange; 
+	margin-bottom:  18px; 
+	max-width:  100%; 
 }
 
-
-// Colors
-
-$orange: #FF6236;
-$orange-gradient: linear-gradient(143.46deg, rgba(255, 140, 0, 1) 0%, rgba(255, 98, 54, 1) 100%);
-$set-gradient: linear-gradient(90deg, rgba(49, 0, 0, 1) 32.45%, rgba(255, 98, 54, 1) 100%);
 
 .action-button {
 	margin-top:  18px;

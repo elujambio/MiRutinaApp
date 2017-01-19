@@ -44,8 +44,12 @@ page-workoutdetails {
   .exercise {
     display:  flex; 
     flex-direction:  column; 
-    height:  56px; 
+    max-height:  56px; 
     overflow:  hidden; 
+    transition:  all .4s ease;  
+  }
+  .open {
+    max-height:  176px; 
   }
   .exercise--head {
     @extend .set--info; 

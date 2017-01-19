@@ -20,22 +20,22 @@
 		</div>	
 		<div class="user__name">{{ user?.name }} </div>
 	</div>
-	<h1> Member since: ({{ user?.role.created_at}})</h1>
-
-	<p>{{user?.img}}</p>
-	<p>{{ user?.name }} </p>
-	<p> Member since: ({{ user?.created_at}})</p>
-	<p>Edad: {{user?.age}}</p>
-	<p>Altura: {{user?.height}}</p>
-	<p>Peso: {{user?.weight}}</p>
-	<p>Indice de Masa Corporal: {{user?.bodymass_index}}</p>
-
-	<ion-card >
-		<ion-card-header>
-		Peso
-		</ion-card-header>
-		<ion-card-content>
-		70 kg
-		</ion-card-content>
-	</ion-card>
+	<div class="ud-container">	
+		<div class="user__data">
+			<label>Edad:</label>
+			<p>{{user?.age}}</p>
+		</div>
+		<div class="user__data">
+			<label>Altura</label>
+			<p>{{user?.height}}</p>
+		</div>
+		<div class="user__data">
+			<label>Peso:</label>
+			<p>{{user?.weight}}</p>
+		</div>
+		<div class="user__data">
+			<label>IMC:</label>
+			<p>{{user?.bodymass_index}}</p>
+		</div>
+	</div>
 </div>

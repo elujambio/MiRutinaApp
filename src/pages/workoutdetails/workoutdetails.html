@@ -22,19 +22,18 @@
 <!-- Click: startTimer() Reset: !status() && (started() || finished()) || finished()  -->
 
   <div class="routine">
-    <div class="set" *ngFor="let exercise of exercises?.sets">
+    <div class="set" *ngFor="let exercise of exercises?.sets; ">
       
       <div class="set--info">
         <div class="set--title">
           {{ exercise.name }} 
-          
         </div>
         <div class="set--cycles">
           {{ exercise.times }} ciclos
         </div>
       </div>
-      <div class="set--exercises" *ngFor="let ex of exercise.exercises">
-        <div class="exercise">
+      <div class="set--exercises" *ngFor="let ex of exercise.exercises; let i = index;">
+        <div class="exercise" (click)="toggleDetails(i);" [ngClass]="{ 'open': i}">
           <div class="exercise--head">
             <div class="exercise--name">
               {{ex.name}}
