@@ -71,15 +71,15 @@ export class TimerComponent {
                  this.timerTick();
                 //this.timer.hasFinished = true;
             }
-        }, 100);
+        }, 10);
     }
 
     getSecondsAsDigitalClock(inputSeconds: number) {
         var sec_num = parseInt(inputSeconds.toString(), 10); // don't forget the second param
-        var hours   = Math.floor(sec_num / 36000);
-        var minutes = Math.floor((sec_num - (hours * 36000)) / 6000);
-        var seconds = Math.floor((sec_num - (hours * 36000)) / 10);
-        var miliseconds = sec_num - (hours * 36000) - (minutes * 6000) - (seconds * 10);
+        var hours   = Math.floor(sec_num / 360000);
+        var minutes = Math.floor((sec_num - (hours * 360000)) / 60000);
+        var seconds = Math.floor((sec_num - (hours * 360000)) / 100);
+        var miliseconds = sec_num - (hours * 360000) - (minutes * 60000) - (seconds * 100);
         var hoursString = '';
         var minutesString = '';
         var secondsString = '';

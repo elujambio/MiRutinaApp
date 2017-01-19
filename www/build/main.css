@@ -22562,6 +22562,10 @@ page-challengedetails .teacher__image {
   margin-right: 12px;
 }
 
+page-challengedetails .ranking {
+  text-align: right;
+}
+
 page-challengedetails .teacher__name {
   font-size: 18px;
   font-weight: bold;

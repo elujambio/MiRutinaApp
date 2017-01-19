@@ -30,13 +30,18 @@
 
   <h4> Miembros Inscritos:</h4>
 
-  <ion-card *ngFor="let detail of details?.enrolled">
+  <ion-card *ngFor="let detail of details?.enrolled" >
     <ion-card-header>
-      {{ detail.name }}
+      <div class="class--teacher">
+        <div class="teacher__image">
+          <img src="{{ detail.img }}">
+        </div>
+        <p class="teacher__name">{{ detail.name }}</p>
+        <ion-badge class="ranking" item-right>1st</ion-badge>
+      </div>
     </ion-card-header>
     <ion-card-content>
-    Peso:  {{ detail.weight }}
-    BMI:  {{ detail.bodymass_index }}
+
     </ion-card-content>
   </ion-card>
 

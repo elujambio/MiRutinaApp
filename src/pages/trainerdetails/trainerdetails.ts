@@ -24,7 +24,7 @@ public details: any;
 
   constructor(public navTitle: NavbarTitle, public navCtrl: NavController, public navParams: NavParams, public apiCtrl: Api) {
   this.name = this.navParams.get('trainerName');
-  navTitle.setTitle(this.name);
+  navTitle.setTitle("Hola");
   }
 
   ionViewDidLoad() {

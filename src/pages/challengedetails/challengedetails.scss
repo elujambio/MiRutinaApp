@@ -1,6 +1,6 @@
 page-challengedetails {
 
-  
+
   .class--image {
     display:  flex;
     height:  144px;
@@ -34,6 +34,9 @@ page-challengedetails {
     border-radius:  18px;
     border:  solid 2px $orange;
     margin-right:  12px;
+  }
+  .ranking{
+    text-align: right;
   }
   .teacher__name {
     font-size:  18px;
