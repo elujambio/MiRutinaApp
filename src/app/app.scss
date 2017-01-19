@@ -54,7 +54,14 @@ $set-gradient: linear-gradient(90deg, rgba(49, 0, 0, 1) 32.45%, rgba(255, 98, 54
 	font-weight:  bold;	
 
 }
-
+.title {
+	font-size:  18px; 
+	margin-bottom:  36px; 
+	color:  #212121; 
+	font-weight:  bold; 
+	font-style:  italic; 
+	text-transform:  uppercase; 
+}
 .header {
 	height:  140px; 
 	width:  100%; 
