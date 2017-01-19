@@ -28,22 +28,131 @@
     </div>
   </div>
 
-  <h4> Miembros Inscritos:</h4>
 
-  <ion-card *ngFor="let detail of details?.enrolled" >
-    <ion-card-header>
-      <div class="class--teacher">
-        <div class="teacher__image">
-          <img src="{{ detail.img }}">
+
+  <div class="ranking-container" *ngFor="let user of details?.enrolled">
+    <h4 class="title">Miembros <br> Inscritos:</h4>
+    <div class="user-card">
+      <div class="user--details">
+        <div class="user--image">
+          {{ user.img }}
         </div>
-        <p class="teacher__name">{{ detail.name }}</p>
-        <ion-badge class="ranking" item-right>1st</ion-badge>
+        <div class="user--name">
+          {{ user.name }}
+        </div>
       </div>
-    </ion-card-header>
-    <ion-card-content>
-
-    </ion-card-content>
-  </ion-card>
-
+      <div class="user--ranking">1st</div>
+    </div>
+    <div class="user-card">
+      <div class="user--details">
+        <div class="user--image">
+          {{ user.img }}
+        </div>
+        <div class="user--name">
+          {{ user.name }}
+        </div>
+      </div>
+      <div class="user--ranking">1st</div>
+    </div>
+    <div class="user-card">
+      <div class="user--details">
+        <div class="user--image">
+          {{ user.img }}
+        </div>
+        <div class="user--name">
+          {{ user.name }}
+        </div>
+      </div>
+      <div class="user--ranking">1st</div>
+    </div>
+    <div class="user-card">
+      <div class="user--details">
+        <div class="user--image">
+          {{ user.img }}
+        </div>
+        <div class="user--name">
+          {{ user.name }}
+        </div>
+      </div>
+      <div class="user--ranking">1st</div>
+    </div>
+    <div class="user-card">
+      <div class="user--details">
+        <div class="user--image">
+          {{ user.img }}
+        </div>
+        <div class="user--name">
+          {{ user.name }}
+        </div>
+      </div>
+      <div class="user--ranking">1st</div>
+    </div>
+    <div class="user-card">
+      <div class="user--details">
+        <div class="user--image">
+          {{ user.img }}
+        </div>
+        <div class="user--name">
+          {{ user.name }}
+        </div>
+      </div>
+      <div class="user--ranking">1st</div>
+    </div>
+    <div class="user-card">
+      <div class="user--details">
+        <div class="user--image">
+          {{ user.img }}
+        </div>
+        <div class="user--name">
+          {{ user.name }}
+        </div>
+      </div>
+      <div class="user--ranking">1st</div>
+    </div>
+    <div class="user-card">
+      <div class="user--details">
+        <div class="user--image">
+          {{ user.img }}
+        </div>
+        <div class="user--name">
+          {{ user.name }}
+        </div>
+      </div>
+      <div class="user--ranking">1st</div>
+    </div>
+    <div class="user-card">
+      <div class="user--details">
+        <div class="user--image">
+          {{ user.img }}
+        </div>
+        <div class="user--name">
+          {{ user.name }}
+        </div>
+      </div>
+      <div class="user--ranking">1st</div>
+    </div>
+    <div class="user-card">
+      <div class="user--details">
+        <div class="user--image">
+          {{ user.img }}
+        </div>
+        <div class="user--name">
+          {{ user.name }}
+        </div>
+      </div>
+      <div class="user--ranking">1st</div>
+    </div>
+    <div class="user-card">
+      <div class="user--details">
+        <div class="user--image">
+          {{ user.img }}
+        </div>
+        <div class="user--name">
+          {{ user.name }}
+        </div>
+      </div>
+      <div class="user--ranking">1st</div>
+    </div>
+  </div>
 
 </ion-content>
