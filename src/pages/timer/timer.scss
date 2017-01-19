@@ -1,3 +1,11 @@
 page-timer {
+	display:  flex; 
+	flex-direction:  column; 
 
+	.timer--button {
+		font-family:  'Monaco'; 
+		font-size:  36px; 
+		color:  #404040; 
+		background:  none; 
+	}
 }
