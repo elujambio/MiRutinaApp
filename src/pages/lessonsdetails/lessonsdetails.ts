@@ -22,6 +22,7 @@ public teacher: any;
 public gymid: any;
 public teacherid: any;
 public title = ""; 
+public lectures_by_day: any; 
 
   constructor(public navTitle: NavbarTitle, public navCtrl: NavController, public navParams: NavParams, public apiCtrl: Api) {
         //console.log('ionViewDidLoad LessonsdetailsPage');
