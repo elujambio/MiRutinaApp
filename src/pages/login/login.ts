@@ -33,6 +33,17 @@ export class LoginPage {
                 private el: ElementRef, public storage: Storage) {
 	this.usr="";
 	this.pass="";
+
+	this.dataCtrl.getData().then((credentials) => {
+		if (credentials) {
+			this.credentials = JSON.parse(credentials);
+			//console.log(this.credentials);
+			this.navCtrl.setRoot(DashboardPage);
+		}
+		else {
+
+		}
+	});
 	}
 
 	ionViewDidLoad() {

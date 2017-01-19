@@ -29,7 +29,13 @@ export class DashboardPage {
 	public user: any;
 
 	constructor(public navCtrl: NavController, public navParams: NavParams, public apiCtrl: Api, public dataCtrl: Data) {
-	this.user = this.navParams.get('user');
+	this.apiCtrl.get('http://gymapp-nuva.herokuapp.com/api/user')
+	.then(data => {
+		this.user = data;
+		console.log(this.user);
+		});
+
+	//his.user = this.navParams.get('user');
 	}
 
 	goTo(page) {
