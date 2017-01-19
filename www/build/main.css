@@ -23109,6 +23109,22 @@ page-rutinas .class__image {
   background-color: #f5f5f5;
 }
 
+page-timer {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+page-timer .timer--button {
+  font-family: 'Monaco';
+  font-size: 36px;
+  color: #404040;
+  background: none;
+}
+
 page-trainerdetails .class--image {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -23198,6 +23214,98 @@ page-trainerdetails .class--size-and-suscribe label {
 page-trainerdetails .class--size-and-suscribe .class--quota {
   font-size: 21px;
   font-weight: bold;
+}
+
+page-workoutdetails timer {
+  margin-top: 18px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+page-workoutdetails timer .timer--button {
+  font-family: 'Monaco';
+  font-size: 36px;
+  color: #404040;
+  background: none;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+page-workoutdetails .ab-container {
+  padding: 0 18px;
+  width: 100%;
+}
+
+page-workoutdetails .routine {
+  width: 100%;
+  padding: 18px;
+}
+
+page-workoutdetails .set--info, page-workoutdetails .exercise--head {
+  width: 100%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background-color: #404040;
+  color: #ffffff;
+  padding: 12px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+page-workoutdetails .set--title,
+page-workoutdetails .set--cycles {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+page-workoutdetails .set--exercises {
+  width: 100%;
+}
+
+page-workoutdetails .exercise {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 56px;
+  overflow: hidden;
+}
+
+page-workoutdetails .exercise--head {
+  color: #424242;
+  background-color: #e9e9e9;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+page-workoutdetails .exercise--details {
+  width: 100%;
+  height: 120px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  background: #123421;
 }
 
 page-workoutdetails .container {

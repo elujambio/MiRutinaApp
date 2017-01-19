@@ -10,34 +10,44 @@
   <nav-header>
   </nav-header>
 
-    <timer  [timeInSeconds]="0"></timer>
 
-    <div class="action-button" (click)="startTimer()" *ngIf="!started()">Iniciar rutina</div>
-    <div class="action-button" (click)="pause()" *ngIf="status() && started() && !finished()">Pausar rutina</div>
-    <div class="action-button" (click)="resume()" *ngIf="!status() && started() && !finished()">Continuar rutina</div>
+  <div class="ab-container">
+    
+      <timer class="timer" [timeInSeconds]="0"></timer>
+      <div class="action-button" (click)="startTimer()" *ngIf="!started()">Iniciar rutina</div>
+      <div class="action-button" (click)="pause()" *ngIf="status() && started() && !finished()">Pausar rutina</div>
+      <div class="action-button" (click)="resume()" *ngIf="!status() && started() && !finished()">Continuar rutina</div>
+  </div>
 
 <!-- Click: startTimer() Reset: !status() && (started() || finished()) || finished()  -->
 
-  <ion-card *ngFor="let exercise of exercises?.sets">
-    <ion-card>
-      <ion-card-header>
-          {{exercise.name}}          {{exercise.times}} ciclos
-        </ion-card-header>
-        </ion-card>
-        <ion-card *ngFor="let ex of exercise.exercises">
-          <ion-card-header>
-              {{ex.name}}      {{ex.pivot.times}} reps
-            </ion-card-header>
-            <ion-card-content>
-       <div class="video-button">Ver video</div>
-            </ion-card-content>
-            </ion-card>
-          <ion-card-header>
+  <div class="routine">
+    <div class="set" *ngFor="let exercise of exercises?.sets">
+      
+      <div class="set--info">
+        <div class="set--title">
+          {{ exercise.name }} 
+          
+        </div>
+        <div class="set--cycles">
+          {{ exercise.times }} ciclos
+        </div>
+      </div>
+      <div class="set--exercises" *ngFor="let ex of exercise.exercises">
+        <div class="exercise">
+          <div class="exercise--head">
+            <div class="exercise--name">
+              {{ex.name}}
+            </div>
+            <div class="exercise--reps"> {{ ex.pivot.times }} reps</div>
+          </div>
+          <div class="exercise--details">
+            
+          </div>
+        </div>
+      </div>
 
-      </ion-card-header>
-      <ion-card-content>
-      </ion-card-content>
-    </ion-card>
-
+    </div>
+  </div>
 
 </ion-content>
