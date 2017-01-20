@@ -35,10 +35,10 @@ export class DashboardPage {
 		this.user = data;
 		console.log(this.user);
 		});
+
 		this.apiCtrl.get('http://gymapp-nuva.herokuapp.com/api/advertisement')
 		.then(data => {
 			this.advertisements = data;
-			console.log(this.user);
 			});
 
 	//his.user = this.navParams.get('user');

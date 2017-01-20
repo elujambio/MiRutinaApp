@@ -23169,6 +23169,20 @@ page-gym .user__name {
   font-weight: bold;
   font-size: 24px;
   color: #000000;
+  margin-bottom: 20px;
+}
+
+page-gym .user__date {
+  font-weight: bold;
+  font-size: 16px;
+  color: #000000;
+  margin-bottom: 12px;
+}
+
+page-gym .user__date2 {
+  font-weight: bold;
+  font-size: 16px;
+  color: #000000;
   margin-bottom: 48px;
 }
 
