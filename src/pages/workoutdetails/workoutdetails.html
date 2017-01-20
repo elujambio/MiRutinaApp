@@ -14,9 +14,9 @@
   <div class="ab-container">
 
       <timer class="timer" [timeInSeconds]="0"></timer>
-      <div class="action-button" (click)="startTimer()" *ngIf="!started()">Iniciar rutina</div>
-      <div class="action-button" (click)="pause()" *ngIf="status() && started() && !finished()">Pausar rutina</div>
-      <div class="action-button" (click)="resume()" *ngIf="!status() && started() && !finished()">Continuar rutina</div>
+      <div class="action-button" (press)="startTimer()" *ngIf="!started()">Iniciar rutina</div>
+      <div class="action-button" (press)="pause()" *ngIf="status() && started() && !finished()">Pausar rutina</div>
+      <div class="action-button" (press)="resume()" *ngIf="!status() && started() && !finished()">Continuar rutina</div>
   </div>
 
 <!-- Click: startTimer() Reset: !status() && (started() || finished()) || finished()  -->
