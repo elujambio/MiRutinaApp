@@ -59,10 +59,12 @@ toggleDetails(newValue: any) {
   }
 }
 
-size(count){
-count++;
 
+addSource(img){
+let image = "https://s3-us-west-1.amazonaws.com/mirutina/" + img;
+return image;
 }
+
 
 tryopen(value){
  if(value){this.state = false;}

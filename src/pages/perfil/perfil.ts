@@ -24,7 +24,8 @@ export class PerfilPage {
 		this.apiCtrl.get('http://gymapp-nuva.herokuapp.com/api/user')
 		.then(data => {
 			this.user = data;
-			console.log(this.user);
+      this.user.weight = this.user.weight / 1000 + "kg";
+      this.user.height = this.user.height.charAt(0) + "." + this.user.height.charAt(1) + this.user.height.charAt(2);
 		});
 	}
 
