@@ -21,10 +21,10 @@ import { NavbarTitle } from "../../providers/navbar-title";
 export class ClasesPage {
 public user: any;
 public lessons: any;
-public name: any; 
-public title: any = "Clases"; 
+public name: any;
+public title: any = "Clases";
   constructor(public navTitle: NavbarTitle, public navCtrl: NavController, public navParams: NavParams, public apiCtrl: Api) {
-    // title = "Clases"; 
+    // title = "Clases";
     navTitle.setTitle("Clases");
   }
   ionViewDidLoad() {
@@ -45,6 +45,11 @@ public title: any = "Clases";
 
   goTo(id, gid, tid){
     this.navCtrl.push(LessonsdetailsPage, { idLesson: id , gymId: gid, teacherId: tid});
+  }
+
+  addSource(img){
+  let image = "https://s3-us-west-1.amazonaws.com/mirutina/" + img;
+  return image;
   }
 
 }

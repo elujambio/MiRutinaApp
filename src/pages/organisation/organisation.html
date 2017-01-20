@@ -12,7 +12,7 @@
 
     <div class="class-card" *ngFor="let challenge of challenges" (click)="goTo(challenge.id, challenge.name)">
       <div class="class__image">
-        <img src="{{challenge.pic_url}}" alt="">
+        <img src="{{addSource(challenge.pic_url)}}" alt="">
       </div>
       <div class="class__info">
         <div class="class__name">{{ challenge.name }}</div>

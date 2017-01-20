@@ -15,7 +15,7 @@
 
     <div class="class-card" *ngFor="let trainer of trainers?.staff" (click)="goTo(trainer.id, trainer.name, trainer.gym_id)">
       <div class="class__image">
-        <img src="{{trainer.img}}" alt="">
+        <img src="{{addSource(trainer.img)}}" alt="">
       </div>
       <div class="class__info">
         <div class="class__name">{{ trainer.name }}</div>

@@ -24,7 +24,7 @@ export class GymPage {
 	ionViewDidLoad() {
 
 		this.user = this.navParams.get('user');
- 
+
 			this.apiCtrl.get('http://gymapp-nuva.herokuapp.com/api/gym')
 				.then(data => {
 					this.gyms = data;
@@ -38,5 +38,10 @@ export class GymPage {
 	addGym() {
 		this.navCtrl.push(AddGymPage, { user: this.user });
 	}
+
+  addSource(img){
+  let image = "https://s3-us-west-1.amazonaws.com/mirutina/" + img;
+  return image;
+  }
 
 }

@@ -12,7 +12,7 @@
 
     <div class="class-card" *ngFor="let workout of workouts?.enrolled" (click)="goTo(workout.id, workout.name)">
       <div class="class__image">
-        <img src="{{workout.creator_id}}" alt="">
+        <img src="{{addSource(workout.creator_id)}}" alt="">
       </div>
       <div class="class__info">
         <div class="class__name">{{ workout.name }}</div>

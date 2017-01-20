@@ -27,6 +27,7 @@ import { NavController, NavParams } from 'ionic-angular';
 export class DashboardPage {
 
 	public user: any;
+	public advertisements: any;
 
 	constructor(public navCtrl: NavController, public navParams: NavParams, public apiCtrl: Api, public dataCtrl: Data) {
 	this.apiCtrl.get('http://gymapp-nuva.herokuapp.com/api/user')
@@ -34,6 +35,11 @@ export class DashboardPage {
 		this.user = data;
 		console.log(this.user);
 		});
+		this.apiCtrl.get('http://gymapp-nuva.herokuapp.com/api/advertisement')
+		.then(data => {
+			this.advertisements = data;
+			console.log(this.user);
+			});
 
 	//his.user = this.navParams.get('user');
 	}
@@ -58,6 +64,11 @@ export class DashboardPage {
 logout(){
 this.dataCtrl.remove('credentials');
 this.navCtrl.push(LoginPage);
+}
+
+addSource(img){
+let image = "https://s3-us-west-1.amazonaws.com/mirutina/" + img;
+return image;
 }
 
 

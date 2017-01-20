@@ -23,13 +23,19 @@ public equipments: any;
 	}
 
   ionViewDidLoad() {
-    
+
     this.gymid = this.navParams.get('gymId');
     this.apiCtrl.get('http://gymapp-nuva.herokuapp.com/api/gym/'+this.gymid+'/equipment')
       .then(data => {
         this.equipments = data;
       });
   }
+
+	addSource(img){
+	let image = "https://s3-us-west-1.amazonaws.com/mirutina/" + img;
+	return image;
+	}
+
 
 
 

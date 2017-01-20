@@ -47,4 +47,9 @@ export class PerfilPage {
 		this.navCtrl.push(AddGymPage, { user: this.user });
 	}
 
+  addSource(img){
+  let image = "https://s3-us-west-1.amazonaws.com/mirutina/" + img;
+  return image;
+  }
+
 }

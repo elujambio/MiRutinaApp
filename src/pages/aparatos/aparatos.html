@@ -15,7 +15,7 @@
 
     <div class="class-card" *ngFor="let equipment of equipments" >
       <div class="class__image">
-        <img src="{{equipment.img}}" alt="">
+        <img src="{{addSource(equipment.img)}}" alt="">
       </div>
       <div class="class__info">
         <div class="class__name">{{ equipment.name }}</div>

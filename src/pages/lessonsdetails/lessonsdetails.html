@@ -18,18 +18,18 @@
 	<nav-header>
 	</nav-header>
 
-	<div class="class--image"> 
-		<img src="{{ details?.img }}">
+	<div class="class--image">
+		<img src="{{ addSource(details?.img) }}">
 	</div>
-	
+
 	<div class="class--details">
 
 		<h1 class="class--name"> {{ details?.name }} </h1>
 
-		<div class="class--teacher"> 
+		<div class="class--teacher">
 			<div class="teacher__image">
-				<img src="{{ teacher?.img }}"> 
-				
+				<img src="{{ addSource(teacher?.img) }}"> 
+
 			</div>
 			<p class="teacher__name">{{ teacher?.name }}</p>
 		</div>
@@ -55,8 +55,8 @@
 			  <div class="timetable--schedule">
 			    {{ lecture.starts }} a {{ lecture.ends }}
 			  </div>
-			</div>	
-		</div>	
+			</div>
+		</div>
 
 
 

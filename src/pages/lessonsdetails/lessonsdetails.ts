@@ -21,8 +21,8 @@ public details: any;
 public teacher: any;
 public gymid: any;
 public teacherid: any;
-public title = ""; 
-public lectures_by_day: any; 
+public title = "";
+public lectures_by_day: any;
 
   constructor(public navTitle: NavbarTitle, public navCtrl: NavController, public navParams: NavParams, public apiCtrl: Api) {
         //console.log('ionViewDidLoad LessonsdetailsPage');
@@ -32,7 +32,7 @@ public lectures_by_day: any;
     this.apiCtrl.get('http://gymapp-nuva.herokuapp.com/api/lesson/'+this.idLesson+'/lecture')
       .then(data => {
         this.details = data;
-        navTitle.setTitle(this.details.name); 
+        navTitle.setTitle(this.details.name);
       });
       this.apiCtrl.get('http://gymapp-nuva.herokuapp.com/api/gym/'+this.gymid+"/user/"+this.teacherid)
         .then(data => {
@@ -43,6 +43,11 @@ public lectures_by_day: any;
 
   ionViewDidLoad() {
 
+  }
+
+  addSource(img){
+  let image = "https://s3-us-west-1.amazonaws.com/mirutina/" + img;
+  return image;
   }
 
 

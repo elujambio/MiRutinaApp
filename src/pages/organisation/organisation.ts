@@ -36,4 +36,9 @@ public challenges: any;
    this.navCtrl.push(ChallengedetailsPage, { idChallenge: id, nameChallenge: name });
   }
 
+  addSource(img){
+  let image = "https://s3-us-west-1.amazonaws.com/mirutina/" + img;
+  return image;
+  }
+
 }

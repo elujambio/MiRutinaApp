@@ -39,4 +39,9 @@ goTo(exid, name){
 this.navCtrl.push(WorkoutdetailsPage, { exerciseId: exid, workoutName: name });
 }
 
+addSource(img){
+let image = "https://s3-us-west-1.amazonaws.com/mirutina/" + img;
+return image;
+}
+
 }

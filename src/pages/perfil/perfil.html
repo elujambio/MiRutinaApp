@@ -11,16 +11,16 @@
 </ion-header>
  -->
 
-<nav-header></nav-header>	
+<nav-header></nav-header>
 
 <div class="profile-container">
 	<div class="user">
 		<div class="user__image">
-			<img src="{{ user?.img }}">
-		</div>	
+			<img src="{{ addSource(user?.img) }}">
+		</div>
 		<div class="user__name">{{ user?.name }} </div>
 	</div>
-	<div class="ud-container">	
+	<div class="ud-container">
 		<div class="user__data">
 			<label>Edad:</label>
 			<p>{{user?.age}}</p>

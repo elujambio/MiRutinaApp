@@ -38,4 +38,9 @@ goTo(id, name, gymid){
 this.navCtrl.push(TrainerdetailsPage, {trainerId: id, trainerName: name, gymId: gymid});
 }
 
+addSource(img){
+let image = "https://s3-us-west-1.amazonaws.com/mirutina/" + img;
+return image;
+}
+
 }

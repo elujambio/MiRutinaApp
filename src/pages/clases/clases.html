@@ -9,10 +9,10 @@
   <nav-header>
   </nav-header>
   <div class="container">
-    
+
     <div class="class-card" *ngFor="let lesson of lessons" (click)="goTo(lesson.id, lesson.gym_id, lesson.teacher_id)">
       <div class="class__image">
-        <img src="{{lesson.img}}" alt="">
+        <img src="{{addSource(lesson.img)}}" alt="">
       </div>
       <div class="class__info">
         <div class="class__name">{{ lesson.name }}</div>

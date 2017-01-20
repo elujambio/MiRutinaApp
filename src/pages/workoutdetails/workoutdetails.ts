@@ -25,12 +25,18 @@ public exercises: any;
 public exerciseid: any;
 public name: any;
 public open: number;
-public e_d: number; 
+public e_d: number;
+public state: any;
+public no_sets: any;
+public no_exercises: any;
+public ex_aux: any;
+
   @ViewChild(TimerComponent) timer: TimerComponent;
 
   constructor(public navTitle: NavbarTitle, public navCtrl: NavController, public navParams: NavParams, public apiCtrl: Api) {
 	this.name = this.navParams.get('workoutName');
   navTitle.setTitle(this.name);
+	this.state = false;
   }
 
   ionViewDidLoad() {
@@ -39,6 +45,7 @@ public e_d: number;
 		this.apiCtrl.get('http://gymapp-nuva.herokuapp.com/api/workout/'+this.exerciseid)
 	    .then(data => {
 	      this.exercises = data;
+
 	    });
 
   }
@@ -50,6 +57,16 @@ toggleDetails(newValue: any) {
   else {
     this.open = newValue;
   }
+}
+
+size(count){
+count++;
+
+}
+
+tryopen(value){
+ if(value){this.state = false;}
+ else{this.state = true;}
 }
 
 startTimer(){
