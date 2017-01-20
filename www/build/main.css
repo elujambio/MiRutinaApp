@@ -22316,7 +22316,7 @@ ion-menu {
 .header {
   height: 140px;
   width: 100%;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   background: linear-gradient(143.46deg, darkorange 0%, #ff6236 100%);
@@ -23207,6 +23207,7 @@ page-gym .user__data {
   width: 50%;
   box-sizing: border-box;
   padding: 18px;
+  padding-bottom: 48px;
 }
 
 page-gym .user__data label {
@@ -23221,6 +23222,12 @@ page-gym .user__data p {
   color: #FF6236;
   font-size: 48px;
   font-weight: bold;
+  margin-bottom: 0;
+}
+
+page-gym .user__data small {
+  font-size: 12px;
+  line-height: 100%;
 }
 
 page-gym .user__data:nth-of-type(1) {
