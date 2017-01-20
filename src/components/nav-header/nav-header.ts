@@ -22,12 +22,19 @@ export class NavHeaderComponent {
   constructor(public navTitle: NavbarTitle, public viewCtrl: ViewController, public navCtrl: NavController, public navParams: NavParams) {
     this.title = navTitle.getTitle();
   }
+
   update() {
     this.title = this.navTitle.getTitle();
-
   }
+
   goBack() {
-    this.navCtrl.push(DashboardPage);
+	if(this.title!="Retos" || this.title!="Clases" || this.title!="Mi Rutina" || this.title!="Entrenadores" || this.title!="Aparatos" ||
+	this.title!="Gimnasio" ){
+  this.navCtrl.pop();
   }
+	else{
+	this.navCtrl.push(DashboardPage);
+	}
 
+}
 }
