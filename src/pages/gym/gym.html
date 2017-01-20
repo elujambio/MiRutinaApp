@@ -10,15 +10,24 @@
 </ion-header> -->
 
 <ion-content>
-	<nav-header></nav-header>		
+	<nav-header></nav-header>
 
-	<ion-card >
-		<ion-card-header>
-			{{ gyms?.name }}
-		</ion-card-header>
-		<ion-card-content>
-			{{ gyms?.opens }}
-			{{ gyms?.closes }}
-		</ion-card-content>
-	</ion-card>
-</ion-content>
+	<div class="gym__name">
+		{{gyms?.name}}
+	</div>
+
+	<div class="gym__adress">
+		{{gyms?.address}}
+	</div>
+
+<div class="">
+	Horario:
+</div>
+
+	<div class="gym__time">
+		{{gyms?.opens}}
+	</div>
+
+	<div class="gym__time">
+		{{gyms?.closes}}
+	</div>
