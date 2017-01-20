@@ -25,15 +25,14 @@ public title  = "Mi Rutina";
   }
 
 	ionViewDidLoad() {
+  console.log("Hola");
   this.user = this.navParams.get('user');
 
-  if (this.user) { // all is well
     this.apiCtrl.get('http://gymapp-nuva.herokuapp.com/api/workout')
       .then(data => {
         this.workouts = data;
       });
 
-  }
 }
 
 goTo(exid, name){

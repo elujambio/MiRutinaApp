@@ -2,10 +2,10 @@
   <ion-content>
     <ion-list>
 		<!-- <button menuToggle>MENU BUTTON</button> -->
-		<div class="menu-element">Mi perfil</div>
-		<div class="menu-element">Rutinas</div>
-		<div class="menu-element">Entrenadores</div>
-		<div class="menu-element">Gimnasios</div>
+		<div class="menu-element" (click)="open(1, 'perfil')" menu-close>Mi perfil</div>
+		<div class="menu-element" (click)="goTo('rutinas')">Rutinas</div>
+		<div class="menu-element" (click)="open(1, 'entrenadores')">Entrenadores</div>
+		<div class="menu-element"  (click)="goTo('gym')">Gimnasios</div>
     </ion-list>
   </ion-content>
 </ion-menu>

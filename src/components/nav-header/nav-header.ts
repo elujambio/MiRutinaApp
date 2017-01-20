@@ -3,7 +3,7 @@ import { NavController, NavParams } from 'ionic-angular';
 import { ViewController } from 'ionic-angular';
 import { NavTitleController } from '../components/nav-title/nav-title';
 import { NavbarTitle } from "../../providers/navbar-title";
-
+	import { DashboardPage } from '../../pages/dashboard/dashboard';
 /*
   Generated class for the NavHeader component.
 
@@ -17,7 +17,7 @@ import { NavbarTitle } from "../../providers/navbar-title";
 export class NavHeaderComponent {
 
   section_image: string;
-  title: string; 
+  title: string;
 
   constructor(public navTitle: NavbarTitle, public viewCtrl: ViewController, public navCtrl: NavController, public navParams: NavParams) {
     this.title = navTitle.getTitle();
@@ -25,9 +25,9 @@ export class NavHeaderComponent {
   update() {
     this.title = this.navTitle.getTitle();
 
-  } 
+  }
   goBack() {
-    this.navCtrl.pop();
+    this.navCtrl.push(DashboardPage);
   }
 
 }
