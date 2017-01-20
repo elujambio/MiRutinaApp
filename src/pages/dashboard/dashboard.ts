@@ -56,7 +56,7 @@ export class DashboardPage {
 	}
 
 logout(){
-//this.dataCtrl.remove('credentials');
+this.dataCtrl.remove('credentials');
 this.navCtrl.push(LoginPage);
 }
 

@@ -16,7 +16,7 @@ import { NavbarTitle } from "../../providers/navbar-title";
 export class GymPage {
 	public user: any;
 	public gyms: any;
-	public title: any; 
+	public title: any;
 	constructor(public navTitle: NavbarTitle, public navCtrl: NavController, public navParams: NavParams, public apiCtrl: Api) {
 	    navTitle.setTitle("Gimnasio");
 	}
@@ -25,12 +25,11 @@ export class GymPage {
 
 		this.user = this.navParams.get('user');
  
-		if (this.user) { // all is well
 			this.apiCtrl.get('http://gymapp-nuva.herokuapp.com/api/gym')
 				.then(data => {
 					this.gyms = data;
 				});
-		}
+
 
 		// something is fishy
 
