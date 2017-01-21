@@ -22912,8 +22912,8 @@ page-gym .gym__name {
   font-size: 56px;
   text-align: center;
   color: #000000;
-  margin-bottom: 20px;
-  margin-top: 20px;
+  margin-bottom: 40px;
+  margin-top: 60px;
 }
 
 page-gym .gym__adress {
@@ -22922,8 +22922,8 @@ page-gym .gym__adress {
   font-size: 28px;
   text-align: center;
   color: #000000;
-  margin-bottom: 20px;
-  margin-top: 20px;
+  margin-bottom: 45px;
+  margin-top: 45px;
 }
 
 page-gym .gym__time {
@@ -22933,7 +22933,7 @@ page-gym .gym__time {
   text-align: center;
   color: #000000;
   margin-bottom: 20px;
-  margin-top: 30px;
+  margin-top: 40px;
 }
 
 page-lessonsdetails .class--image {
