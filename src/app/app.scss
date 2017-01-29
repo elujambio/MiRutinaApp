@@ -25,11 +25,15 @@ $set-gradient: linear-gradient(90deg, rgba(49, 0, 0, 1) 32.45%, rgba(255, 98, 54
 
 * {
 	font-family: 'TeXGyreHeros';
+	transition:  all .3s ease; 
 }
 
 ion-menu {
 	z-index:  1000;
+}
 
+.actTstart1 { 
+	transform:  scale(.9); 
 }
 .side-menu {
 	z-index:  100; 
@@ -43,7 +47,9 @@ ion-menu {
 	ion-list {
 		padding:  18px; 
 		width:  100%; 
-
+	}
+	.menu-inner {
+		width:  100%; 
 	}
 }
 .menu-element {

@@ -22257,10 +22257,16 @@ sub {
 
 * {
   font-family: 'TeXGyreHeros';
+  transition: all .3s ease;
 }
 
 ion-menu {
   z-index: 1000;
+}
+
+.actTstart1 {
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
 }
 
 .side-menu {
@@ -22276,6 +22282,10 @@ ion-menu {
 
 .side-menu ion-list {
   padding: 18px;
+  width: 100%;
+}
+
+.side-menu .menu-inner {
   width: 100%;
 }
 

@@ -9,6 +9,12 @@
     </ion-list>
   </ion-content>
 </ion-menu>
-
-
-<ion-nav  #mycontent [root]="rootPage"></ion-nav>
+<style>
+	.event_listener {
+		height:  100%; 
+		width:  100%; 
+	}
+</style>
+<div class="event_listener" (touchstart)="actionable_touchstart($event)" (touchend)="actionable_touchend($event)">
+	<ion-nav  #mycontent [root]="rootPage"></ion-nav>
+</div>

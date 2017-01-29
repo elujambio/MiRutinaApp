@@ -11,7 +11,7 @@ import { MenuController } from 'ionic-angular';
 
 import { Nav, Platform } from 'ionic-angular';
 /* import root page pages */
-  import { LoginPage } from '../pages/login/login';
+import { LoginPage } from '../pages/login/login';
 
 
 @Component({
@@ -20,7 +20,8 @@ import { Nav, Platform } from 'ionic-angular';
 export class MyApp {
 @ViewChild(Nav) nav: Nav;
 public user: any;
-
+public last_actionable: any; 
+public current_actionable: any; 
   rootPage = LoginPage;
 
   constructor(platform: Platform, public menuCtrl: MenuController) {
@@ -32,6 +33,39 @@ public user: any;
     });
   }
 
+
+  find_ancestor(element, ancestor_class) {
+
+      if (!element.classList.contains(ancestor_class)) {
+        while ((element = element.parentElement) && !element.classList.contains(ancestor_class));
+        if (element == null) {
+          console.log("element is null"); 
+        }
+      }
+      console.log(element);
+      return element;
+  }
+
+  actionable_touchstart($event) {
+
+    this.current_actionable = this.find_ancestor($event.target, "actionable-t1");
+    console.log("this.current_actionable");
+    console.log(this.current_actionable);
+    if(this.current_actionable != null && this.current_actionable != undefined) {
+      this.current_actionable.className += " actTstart1"; 
+      this.last_actionable = this.current_actionable;
+    }
+
+  }
+  actionable_touchend($event) {
+    // console.log($event.target); 
+    // $event.target.className = $event.target.className.replace("act_tstart_1", "");  
+    console.log("this.last_actionable"); 
+    console.log(this.last_actionable); 
+
+    this.last_actionable.className.replace("actTstart1", "");
+    console.log(this.last_actionable.className);
+  }
 
   goTo(page) {
 	  if (page === 'gym') {this.menuCtrl.close(); this.nav.push(GymPage, { user: this.user, title: "Gimnasio"  });}

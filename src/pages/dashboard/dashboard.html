@@ -7,21 +7,22 @@
   <div class="dashboard__menu">
 
     <div class="dashboard__menu__column">
-      <div class="dashboard__menu__item"  (click)="goTo('clases')">
+      <div class="dashboard__menu__item actionable-t1"  (click)="goTo('clases')">
           <h3>Clases</h3>
           <img src="images/clases.svg" alt="">
       </div>
 
-      <div class="dashboard__menu__item"  (click)="goTo('organisation')">
+      <div class="dashboard__menu__item actionable-t1"  (click)="goTo('organisation')">
           <h3>Retos</h3>
+          <img src="images/entrenadores.svg" alt="">
       </div>
 
-      <div class="dashboard__menu__item"  (click)="goTo('gym')" style="background-image:url(images/aparatos-bg.jpg)">
+      <div class="dashboard__menu__item actionable-t1"  (click)="goTo('gym')" style="background-image:url(images/aparatos-bg.jpg)">
           <h3>Gimnasios</h3>
           <img src="images/aparatos.svg" alt="">
       </div>
 
-      <div class="dashboard__menu__item"  (click)="open(user?.gym_id, 'perfil')">
+      <div class="dashboard__menu__item actionable-t1"  (click)="open(user?.gym_id, 'perfil')">
           <h3>Mi Perfil</h3>
       </div>
 
@@ -30,22 +31,21 @@
     </div>
     <div class="dashboard__menu__column">
 
-      <div class="dashboard__menu__item"  style="background-image:url(images/rutina-bg.jpg)" (click)="goTo('rutinas')">
+      <div class="dashboard__menu__item actionable-t1"  style="background-image:url(images/rutina-bg.jpg)" (click)="goTo('rutinas')">
           <h3>Mi Rutina</h3>
           <img src="images/rutina.svg" alt="">
       </div>
 
-      <div class="dashboard__menu__item"  (click)="open(user?.gym_id, 'entrenadores')" style="background-image:url(images/entrenadores-bg.jpg)">
+      <div class="dashboard__menu__item actionable-t1"  (click)="open(user?.gym_id, 'entrenadores')" style="background-image:url(images/entrenadores-bg.jpg)">
           <h3>Entrenadores</h3>
-          <img src="images/entrenadores.svg" alt="">
+          <!-- <img src="images/entrenadores.svg" alt=""> -->
       </div>
-
-      <div class="dashboard__menu__item"  (click)="open(user?.gym_id, 'aparatos')" style="background-image:url(images/aparatos-bg.jpg)">
+      <div class="dashboard__menu__item actionable-t1"  (click)="open(user?.gym_id, 'aparatos')" style="background-image:url(images/aparatos-bg.jpg)">
           <h3>Aparatos</h3>
           <img src="images/aparatos.svg" alt="">
       </div>
 
-      <div class="dashboard__menu__item"  (click)="logout()">
+      <div class="dashboard__menu__item actionable-t1"  (click)="logout()">
           <h3>Logout</h3>
       </div>
     </div>
